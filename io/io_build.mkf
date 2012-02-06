@@ -1,0 +1,28 @@
+includepath source
+includepath ../common/source
+
+library
+{
+	".,io"
+}
+
+files
+{
+	
+	(source)
+	locbund.c
+	sprintf.c
+	sscanf.c
+	ucln_io.c
+	ufile.c
+	ufmt_cmn.c
+	uprintf.c
+	uprntf_p.c
+	uscanf.c
+	uscanf_p.c
+	ustdio.c
+	ustream.cpp
+	
+    
+	
+}

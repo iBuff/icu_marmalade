@@ -1,0 +1,91 @@
+includepath source
+includepath ../common/source
+
+library
+{
+	".,layout"
+}
+
+files
+{
+	
+	(source)
+	AlternateSubstSubtables.cpp
+	AnchorTables.cpp
+	ArabicLayoutEngine.cpp
+	ArabicShaping.cpp
+	CanonData.cpp
+	CanonShaping.cpp
+	ClassDefinitionTables.cpp
+	ContextualGlyphSubstProc.cpp
+	ContextualSubstSubtables.cpp
+	CoverageTables.cpp
+	CursiveAttachmentSubtables.cpp
+	DeviceTables.cpp
+	ExtensionSubtables.cpp
+	Features.cpp
+	GDEFMarkFilter.cpp
+	GlyphDefinitionTables.cpp
+	GlyphIterator.cpp
+	GlyphLookupTables.cpp
+	GlyphPositionAdjustments.cpp
+	GlyphPositioningTables.cpp
+	GlyphPosnLookupProc.cpp
+	GlyphSubstitutionTables.cpp
+	GlyphSubstLookupProc.cpp
+	GXLayoutEngine.cpp
+	HangulLayoutEngine.cpp
+	HanLayoutEngine.cpp
+	IndicClassTables.cpp
+	IndicLayoutEngine.cpp
+	IndicRearrangementProcessor.cpp
+	IndicReordering.cpp
+	KernTable.cpp
+	KhmerLayoutEngine.cpp
+	KhmerReordering.cpp
+	LayoutEngine.cpp
+	LEFontInstance.cpp
+	LEGlyphStorage.cpp
+	LEInsertionList.cpp
+	LigatureSubstProc.cpp
+	LigatureSubstSubtables.cpp
+	loengine.cpp
+	LookupProcessor.cpp
+	Lookups.cpp
+	LookupTables.cpp
+	MarkArrays.cpp
+	MarkToBasePosnSubtables.cpp
+	MarkToLigaturePosnSubtables.cpp
+	MarkToMarkPosnSubtables.cpp
+	MirroredCharData.cpp
+	MorphTables.cpp
+	MPreFixups.cpp
+	MultipleSubstSubtables.cpp
+	NonContextualGlyphSubstProc.cpp
+	OpenTypeLayoutEngine.cpp
+	OpenTypeUtilities.cpp
+	PairPositioningSubtables.cpp
+	ScriptAndLanguage.cpp
+	ScriptAndLanguageTags.cpp
+	SegmentArrayProcessor.cpp
+	SegmentSingleProcessor.cpp
+	ShapingTypeData.cpp
+	SimpleArrayProcessor.cpp
+	SinglePositioningSubtables.cpp
+	SingleSubstitutionSubtables.cpp
+	SingleTableProcessor.cpp
+	StateTableProcessor.cpp
+	SubstitutionLookups.cpp
+	SubtableProcessor.cpp
+	ThaiLayoutEngine.cpp
+	ThaiShaping.cpp
+	ThaiStateTables.cpp
+	TibetanLayoutEngine.cpp
+	TibetanReordering.cpp
+	TrimmedArrayProcessor.cpp
+	ValueRecords.cpp
+
+	
+    
+	
+}

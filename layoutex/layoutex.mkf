@@ -1,0 +1,18 @@
+includepath h
+
+library
+{
+	".,layoutex"
+}
+
+files
+{
+	(h/layout)
+	ParagraphLayout.h
+	playout.h
+	plruns.h
+	RunArrays.h
+
+
+	
+}

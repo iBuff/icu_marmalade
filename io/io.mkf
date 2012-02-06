@@ -1,0 +1,15 @@
+includepath h
+
+library
+{
+	".,io"
+}
+
+files
+{
+	(h/unicode)
+	ustdio.h
+	ustream.h
+
+	
+}

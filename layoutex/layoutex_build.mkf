@@ -1,0 +1,20 @@
+includepath source
+includepath ../common/source
+
+library
+{
+	".,layoutex"
+}
+
+files
+{
+	
+	(source)
+	LXUtilities.cpp
+	ParagraphLayout.cpp
+	playout.cpp
+	plruns.cpp
+	RunArrays.cpp
+
+	
+}

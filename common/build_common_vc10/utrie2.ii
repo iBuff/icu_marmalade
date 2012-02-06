@@ -1,0 +1,2620 @@
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp"
+# 1 "C:\\Users\\will\\Documents\\UtterSpeech\\marmalade\\icu\\common\\build_common_vc10//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/build_common_vc10/temp_defines_debug.h" 1
+# 1 "<command-line>" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp"
+# 29 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 1
+# 36 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h" 1
+# 61 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h" 1
+# 23 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h"
+# 1 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 1
+# 15 "c:/marmalade/5.2/s3e/h/std/sys/types.h"
+# 1 "c:/marmalade/5.2/s3e/h/s3eTypes.h" 1
+# 37 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef unsigned char s3e_uint8_t;
+typedef signed char s3e_int8_t;
+typedef unsigned short int s3e_uint16_t;
+typedef signed short int s3e_int16_t;
+typedef unsigned int s3e_uint32_t;
+typedef signed int s3e_int32_t;
+# 51 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+  typedef signed long long s3e_int64_t;
+  typedef unsigned long long s3e_uint64_t;
+# 74 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef s3e_uint64_t uint64_t;
+typedef s3e_int64_t int64_t;
+typedef s3e_uint32_t uint32_t;
+typedef s3e_int32_t int32_t;
+typedef s3e_uint16_t uint16_t;
+typedef s3e_int16_t int16_t;
+typedef s3e_uint8_t uint8_t;
+typedef s3e_int8_t int8_t;
+# 96 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+    typedef int intptr_t;
+    typedef unsigned int uintptr_t;
+# 108 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef unsigned int uint;
+typedef unsigned short int ushort;
+typedef unsigned long int ulong;
+typedef unsigned char uint8;
+typedef signed char int8;
+
+
+
+
+
+
+
+typedef int64_t int64;
+typedef uint64_t uint64;
+
+
+
+
+
+typedef unsigned int uint32;
+
+
+
+
+
+
+typedef signed int int32;
+
+
+
+
+
+
+typedef uint16_t uint16;
+
+
+
+
+typedef int16_t int16;
+# 226 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef enum s3eResult
+{
+    S3E_RESULT_SUCCESS = 0,
+    S3E_RESULT_ERROR = 1
+} s3eResult;
+
+
+
+
+typedef uint8 s3eBool;
+# 244 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef wchar_t s3eWChar;
+# 256 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef int32 (*s3eCallback) (void* systemData, void* userData);
+# 16 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 2
+# 1 "c:/marmalade/5.2/s3e/h/std/stddef.h" 1
+# 16 "c:/marmalade/5.2/s3e/h/std/stddef.h"
+typedef signed int ptrdiff_t;
+
+
+    typedef unsigned int wint_t;
+    typedef unsigned long int wctype_t;
+
+
+
+
+
+
+
+typedef unsigned int size_t;
+# 17 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 2
+# 1 "c:/marmalade/5.2/s3e/h/std/stdint.h" 1
+# 19 "c:/marmalade/5.2/s3e/h/std/stdint.h"
+typedef signed char int_least8_t;
+typedef short int_least16_t;
+typedef long int_least32_t;
+typedef int64_t int_least64_t;
+
+typedef unsigned char uint_least8_t;
+typedef unsigned short uint_least16_t;
+typedef unsigned long uint_least32_t;
+typedef uint64_t uint_least64_t;
+
+typedef signed char int_fast8_t;
+typedef short int_fast16_t;
+typedef long int_fast32_t;
+typedef int64_t int_fast64_t;
+
+typedef unsigned char uint_fast8_t;
+typedef unsigned short uint_fast16_t;
+typedef unsigned long uint_fast32_t;
+typedef uint64_t uint_fast64_t;
+
+typedef int64_t intmax_t;
+typedef uint64_t uintmax_t;
+# 18 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 2
+# 1 "c:/marmalade/5.2/s3e/h/std/sys/select.h" 1
+# 24 "c:/marmalade/5.2/s3e/h/std/sys/select.h"
+struct timeval;
+
+typedef struct fd_set
+{
+    char fds_bits[256/8];
+} fd_set;
+# 39 "c:/marmalade/5.2/s3e/h/std/sys/select.h"
+extern "C" {
+
+int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
+
+}
+# 19 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 2
+
+
+
+typedef long off_t;
+
+typedef int64_t off64_t;
+
+
+namespace std
+{
+    typedef ::size_t size_t;
+}
+
+
+typedef uint u_int;
+typedef uint8_t u_int8_t;
+typedef uint16_t u_int16_t;
+typedef uint32_t u_int32_t;
+typedef uint64_t u_int64_t;
+
+typedef unsigned short u_short;
+typedef unsigned long u_long;
+typedef unsigned char u_char;
+
+typedef int ssize_t;
+typedef int pid_t;
+typedef short uid_t;
+typedef short gid_t;
+typedef int idtype_t;
+typedef int id_t;
+typedef uint32 mode_t;
+typedef short dev_t;
+typedef short ino_t;
+typedef int key_t;
+typedef void* caddr_t;
+# 24 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h" 2
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/platform.h" 1
+# 26 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h" 2
+# 51 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h"
+# 1 "c:/marmalade/5.2/s3e/h/std/inttypes.h" 1
+# 17 "c:/marmalade/5.2/s3e/h/std/inttypes.h"
+typedef struct
+{
+    long int quot;
+    long int rem;
+} imaxdiv_t;
+
+
+extern "C" {
+
+imaxdiv_t imaxdiv(intmax_t numerator, intmax_t denominator);
+
+}
+# 52 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h" 2
+# 62 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h" 2
+# 231 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+typedef int8_t UBool;
+# 322 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+    typedef wchar_t UChar;
+# 349 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+typedef int32_t UChar32;
+# 386 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/urename.h" 1
+# 35 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/urename.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h" 1
+# 36 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/urename.h" 2
+
+
+
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uvernum.h" 1
+# 41 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/urename.h" 2
+# 387 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h" 2
+# 37 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 1
+# 111 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 1
+# 112 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 2
+# 230 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h" 1
+# 58 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" const uint8_t
+
+
+
+utf8_countTrailBytes_48[256];
+# 91 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" UChar32
+utf8_nextCharSafeBody_48(const uint8_t *s, int32_t *pi, int32_t length, UChar32 c, UBool strict);
+# 103 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" int32_t
+utf8_appendCharSafeBody_48(uint8_t *s, int32_t i, int32_t length, UChar32 c, UBool *pIsError);
+# 115 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" UChar32
+utf8_prevCharSafeBody_48(const uint8_t *s, int32_t start, int32_t *pi, UChar32 c, UBool strict);
+# 127 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" int32_t
+utf8_back1SafeBody_48(const uint8_t *s, int32_t start, int32_t i);
+# 231 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf16.h" 1
+# 232 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 2
+
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf_old.h" 1
+# 235 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 2
+# 38 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h" 1
+# 57 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+typedef uint8_t UVersionInfo[4];
+# 109 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+        namespace icu_48 { }
+        namespace icu = icu_48;
+# 122 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+        using namespace icu_48;
+# 152 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+extern "C" void
+u_versionFromString_48(UVersionInfo versionArray, const char *versionString);
+# 166 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+extern "C" void
+u_versionFromUString_48(UVersionInfo versionArray, const UChar *versionString);
+# 182 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+extern "C" void
+u_versionToString_48(UVersionInfo versionArray, char *versionString);
+# 193 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+extern "C" void
+u_getVersion_48(UVersionInfo versionArray);
+# 39 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uconfig.h" 1
+# 40 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 1 "c:/marmalade/5.2/s3e/h/std/float.h" 1
+# 31 "c:/marmalade/5.2/s3e/h/std/float.h"
+  extern "C" {
+# 109 "c:/marmalade/5.2/s3e/h/std/float.h"
+extern "C" {
+
+unsigned _controlfp(unsigned, unsigned);
+unsigned _clearfp(void);
+unsigned _statusfp(void);
+
+}
+# 150 "c:/marmalade/5.2/s3e/h/std/float.h"
+    }
+# 41 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 314 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+typedef double UDate;
+# 385 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+typedef void* UClassID;
+# 639 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+typedef enum UErrorCode {
+
+
+
+
+
+    U_USING_FALLBACK_WARNING = -128,
+
+    U_ERROR_WARNING_START = -128,
+
+    U_USING_DEFAULT_WARNING = -127,
+
+    U_SAFECLONE_ALLOCATED_WARNING = -126,
+
+    U_STATE_OLD_WARNING = -125,
+
+    U_STRING_NOT_TERMINATED_WARNING = -124,
+
+    U_SORT_KEY_TOO_SHORT_WARNING = -123,
+
+    U_AMBIGUOUS_ALIAS_WARNING = -122,
+
+    U_DIFFERENT_UCA_VERSION = -121,
+
+    U_PLUGIN_CHANGED_LEVEL_WARNING = -120,
+
+    U_ERROR_WARNING_LIMIT,
+
+
+    U_ZERO_ERROR = 0,
+
+    U_ILLEGAL_ARGUMENT_ERROR = 1,
+    U_MISSING_RESOURCE_ERROR = 2,
+    U_INVALID_FORMAT_ERROR = 3,
+    U_FILE_ACCESS_ERROR = 4,
+    U_INTERNAL_PROGRAM_ERROR = 5,
+    U_MESSAGE_PARSE_ERROR = 6,
+    U_MEMORY_ALLOCATION_ERROR = 7,
+    U_INDEX_OUTOFBOUNDS_ERROR = 8,
+    U_PARSE_ERROR = 9,
+    U_INVALID_CHAR_FOUND = 10,
+    U_TRUNCATED_CHAR_FOUND = 11,
+    U_ILLEGAL_CHAR_FOUND = 12,
+    U_INVALID_TABLE_FORMAT = 13,
+    U_INVALID_TABLE_FILE = 14,
+    U_BUFFER_OVERFLOW_ERROR = 15,
+    U_UNSUPPORTED_ERROR = 16,
+    U_RESOURCE_TYPE_MISMATCH = 17,
+    U_ILLEGAL_ESCAPE_SEQUENCE = 18,
+    U_UNSUPPORTED_ESCAPE_SEQUENCE = 19,
+    U_NO_SPACE_AVAILABLE = 20,
+    U_CE_NOT_FOUND_ERROR = 21,
+    U_PRIMARY_TOO_LONG_ERROR = 22,
+    U_STATE_TOO_OLD_ERROR = 23,
+    U_TOO_MANY_ALIASES_ERROR = 24,
+
+    U_ENUM_OUT_OF_SYNC_ERROR = 25,
+    U_INVARIANT_CONVERSION_ERROR = 26,
+    U_INVALID_STATE_ERROR = 27,
+    U_COLLATOR_VERSION_MISMATCH = 28,
+    U_USELESS_COLLATOR_ERROR = 29,
+    U_NO_WRITE_PERMISSION = 30,
+
+    U_STANDARD_ERROR_LIMIT,
+
+
+
+    U_BAD_VARIABLE_DEFINITION=0x10000,
+    U_PARSE_ERROR_START = 0x10000,
+    U_MALFORMED_RULE,
+    U_MALFORMED_SET,
+    U_MALFORMED_SYMBOL_REFERENCE,
+    U_MALFORMED_UNICODE_ESCAPE,
+    U_MALFORMED_VARIABLE_DEFINITION,
+    U_MALFORMED_VARIABLE_REFERENCE,
+    U_MISMATCHED_SEGMENT_DELIMITERS,
+    U_MISPLACED_ANCHOR_START,
+    U_MISPLACED_CURSOR_OFFSET,
+    U_MISPLACED_QUANTIFIER,
+    U_MISSING_OPERATOR,
+    U_MISSING_SEGMENT_CLOSE,
+    U_MULTIPLE_ANTE_CONTEXTS,
+    U_MULTIPLE_CURSORS,
+    U_MULTIPLE_POST_CONTEXTS,
+    U_TRAILING_BACKSLASH,
+    U_UNDEFINED_SEGMENT_REFERENCE,
+    U_UNDEFINED_VARIABLE,
+    U_UNQUOTED_SPECIAL,
+    U_UNTERMINATED_QUOTE,
+    U_RULE_MASK_ERROR,
+    U_MISPLACED_COMPOUND_FILTER,
+    U_MULTIPLE_COMPOUND_FILTERS,
+    U_INVALID_RBT_SYNTAX,
+    U_INVALID_PROPERTY_PATTERN,
+    U_MALFORMED_PRAGMA,
+    U_UNCLOSED_SEGMENT,
+    U_ILLEGAL_CHAR_IN_SEGMENT,
+    U_VARIABLE_RANGE_EXHAUSTED,
+    U_VARIABLE_RANGE_OVERLAP,
+    U_ILLEGAL_CHARACTER,
+    U_INTERNAL_TRANSLITERATOR_ERROR,
+    U_INVALID_ID,
+    U_INVALID_FUNCTION,
+    U_PARSE_ERROR_LIMIT,
+
+
+
+
+    U_UNEXPECTED_TOKEN=0x10100,
+    U_FMT_PARSE_ERROR_START=0x10100,
+    U_MULTIPLE_DECIMAL_SEPARATORS,
+    U_MULTIPLE_DECIMAL_SEPERATORS = U_MULTIPLE_DECIMAL_SEPARATORS,
+    U_MULTIPLE_EXPONENTIAL_SYMBOLS,
+    U_MALFORMED_EXPONENTIAL_PATTERN,
+    U_MULTIPLE_PERCENT_SYMBOLS,
+    U_MULTIPLE_PERMILL_SYMBOLS,
+    U_MULTIPLE_PAD_SPECIFIERS,
+    U_PATTERN_SYNTAX_ERROR,
+    U_ILLEGAL_PAD_POSITION,
+    U_UNMATCHED_BRACES,
+    U_UNSUPPORTED_PROPERTY,
+    U_UNSUPPORTED_ATTRIBUTE,
+    U_ARGUMENT_TYPE_MISMATCH,
+    U_DUPLICATE_KEYWORD,
+    U_UNDEFINED_KEYWORD,
+    U_DEFAULT_KEYWORD_MISSING,
+    U_DECIMAL_NUMBER_SYNTAX_ERROR,
+    U_FORMAT_INEXACT_ERROR,
+    U_FMT_PARSE_ERROR_LIMIT,
+
+
+
+
+    U_BRK_INTERNAL_ERROR=0x10200,
+    U_BRK_ERROR_START=0x10200,
+    U_BRK_HEX_DIGITS_EXPECTED,
+    U_BRK_SEMICOLON_EXPECTED,
+    U_BRK_RULE_SYNTAX,
+    U_BRK_UNCLOSED_SET,
+    U_BRK_ASSIGN_ERROR,
+    U_BRK_VARIABLE_REDFINITION,
+    U_BRK_MISMATCHED_PAREN,
+    U_BRK_NEW_LINE_IN_QUOTED_STRING,
+    U_BRK_UNDEFINED_VARIABLE,
+    U_BRK_INIT_ERROR,
+    U_BRK_RULE_EMPTY_SET,
+    U_BRK_UNRECOGNIZED_OPTION,
+    U_BRK_MALFORMED_RULE_TAG,
+    U_BRK_ERROR_LIMIT,
+
+
+
+
+    U_REGEX_INTERNAL_ERROR=0x10300,
+    U_REGEX_ERROR_START=0x10300,
+    U_REGEX_RULE_SYNTAX,
+    U_REGEX_INVALID_STATE,
+    U_REGEX_BAD_ESCAPE_SEQUENCE,
+    U_REGEX_PROPERTY_SYNTAX,
+    U_REGEX_UNIMPLEMENTED,
+    U_REGEX_MISMATCHED_PAREN,
+    U_REGEX_NUMBER_TOO_BIG,
+    U_REGEX_BAD_INTERVAL,
+    U_REGEX_MAX_LT_MIN,
+    U_REGEX_INVALID_BACK_REF,
+    U_REGEX_INVALID_FLAG,
+    U_REGEX_LOOK_BEHIND_LIMIT,
+    U_REGEX_SET_CONTAINS_STRING,
+    U_REGEX_OCTAL_TOO_BIG,
+    U_REGEX_MISSING_CLOSE_BRACKET,
+    U_REGEX_INVALID_RANGE,
+    U_REGEX_STACK_OVERFLOW,
+    U_REGEX_TIME_OUT,
+    U_REGEX_STOPPED_BY_CALLER,
+    U_REGEX_ERROR_LIMIT,
+
+
+
+
+    U_IDNA_PROHIBITED_ERROR=0x10400,
+    U_IDNA_ERROR_START=0x10400,
+    U_IDNA_UNASSIGNED_ERROR,
+    U_IDNA_CHECK_BIDI_ERROR,
+    U_IDNA_STD3_ASCII_RULES_ERROR,
+    U_IDNA_ACE_PREFIX_ERROR,
+    U_IDNA_VERIFICATION_ERROR,
+    U_IDNA_LABEL_TOO_LONG_ERROR,
+    U_IDNA_ZERO_LENGTH_LABEL_ERROR,
+    U_IDNA_DOMAIN_NAME_TOO_LONG_ERROR,
+    U_IDNA_ERROR_LIMIT,
+
+
+
+    U_STRINGPREP_PROHIBITED_ERROR = U_IDNA_PROHIBITED_ERROR,
+    U_STRINGPREP_UNASSIGNED_ERROR = U_IDNA_UNASSIGNED_ERROR,
+    U_STRINGPREP_CHECK_BIDI_ERROR = U_IDNA_CHECK_BIDI_ERROR,
+
+
+
+
+    U_PLUGIN_ERROR_START=0x10500,
+    U_PLUGIN_TOO_HIGH=0x10500,
+    U_PLUGIN_DIDNT_SET_LEVEL,
+    U_PLUGIN_ERROR_LIMIT,
+
+    U_ERROR_LIMIT=U_PLUGIN_ERROR_LIMIT
+} UErrorCode;
+# 855 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+    static
+    inline UBool U_SUCCESS(UErrorCode code) { return (UBool)(code<=U_ZERO_ERROR); }
+
+
+
+
+    static
+    inline UBool U_FAILURE(UErrorCode code) { return (UBool)(code>U_ZERO_ERROR); }
+# 882 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+extern "C" const char *
+u_errorName_48(UErrorCode code);
+# 30 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h" 1
+# 28 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+# 1 "c:/marmalade/5.2/s3e/h/std/string.h" 1
+# 17 "c:/marmalade/5.2/s3e/h/std/string.h"
+extern "C" {
+
+void *memcpy(void *dest, const void *src, size_t n);
+void *memset(void *s, int c, size_t n);
+int memcmp(const void *s1, const void *s2, size_t n);
+void *memmove(void *dest, const void *src, size_t n);
+void *memchr(const void *s, int c, size_t n);
+void *memrchr(const void *s, int c, size_t n);
+
+
+
+
+
+
+
+int strcmp(const char *s1, const char *s2);
+int strncmp(const char *s1, const char *s2, size_t n);
+char *strsep(char **stringp, const char *delim);
+char *strcpy(char *dest, const char *src);
+char *strncpy(char *dest, const char *src, size_t n);
+char *strchr(const char *s, int c);
+char *strstr(const char *haystack, const char *needle);
+char *strrchr(const char *s, int c);
+char *strdup(const char *s);
+char *strtok(char *str, const char *delim);
+char *strtok_r(char *str, const char *delim, char **saveptr);
+char *strcat(char *dest, const char *src);
+char *strncat(char *dest, const char *src, size_t n);
+size_t strlen(const char *s);
+size_t strnlen(const char *s, size_t n);
+int strcasecmp(const char *s1, const char *s2);
+int strncasecmp(const char *s1, const char *s2, size_t n);
+size_t strspn(const char *s, const char *accept);
+size_t strcspn(const char *s, const char *reject);
+char *strpbrk(const char *s, const char *accept);
+int strcoll(const char *s1, const char *s2);
+char *strerror(int errnum);
+size_t strxfrm(char *dest, const char *src, size_t n);
+
+int strerror_r(int errnum, char *buf, size_t buflen);
+
+
+
+
+
+size_t strlcpy(char* dest, const char* src, size_t len);
+size_t strlcat(char* dest, const char* src, size_t len);
+
+}
+# 29 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h" 2
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h" 1
+# 43 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+extern "C++" { namespace icu_48 {
+# 63 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+template<typename T>
+class LocalPointerBase {
+public:
+
+
+
+
+
+    explicit LocalPointerBase(T *p=__null) : ptr(p) {}
+
+
+
+
+
+    ~LocalPointerBase() { }
+
+
+
+
+
+    UBool isNull() const { return ptr==__null; }
+
+
+
+
+
+    UBool isValid() const { return ptr!=__null; }
+
+
+
+
+
+
+
+    bool operator==(const T *other) const { return ptr==other; }
+
+
+
+
+
+
+
+    bool operator!=(const T *other) const { return ptr!=other; }
+
+
+
+
+
+    T *getAlias() const { return ptr; }
+
+
+
+
+
+    T &operator*() const { return *ptr; }
+
+
+
+
+
+    T *operator->() const { return ptr; }
+
+
+
+
+
+
+    T *orphan() {
+        T *p=ptr;
+        ptr=__null;
+        return p;
+    }
+
+
+
+
+
+
+
+    void adoptInstead(T *p) {
+
+        ptr=p;
+    }
+protected:
+    T *ptr;
+private:
+
+    bool operator==(const LocalPointerBase &other);
+    bool operator!=(const LocalPointerBase &other);
+
+    LocalPointerBase(const LocalPointerBase &other);
+    void operator=(const LocalPointerBase &other);
+
+    static void * operator new(size_t size);
+    static void * operator new[](size_t size);
+
+    static void * operator new(size_t, void *ptr);
+
+};
+# 181 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+template<typename T>
+class LocalPointer : public LocalPointerBase<T> {
+public:
+
+
+
+
+
+    explicit LocalPointer(T *p=__null) : LocalPointerBase<T>(p) {}
+
+
+
+
+    ~LocalPointer() {
+        delete LocalPointerBase<T>::ptr;
+    }
+
+
+
+
+
+
+    void adoptInstead(T *p) {
+        delete LocalPointerBase<T>::ptr;
+        LocalPointerBase<T>::ptr=p;
+    }
+};
+# 227 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+template<typename T>
+class LocalArray : public LocalPointerBase<T> {
+public:
+
+
+
+
+
+    explicit LocalArray(T *p=__null) : LocalPointerBase<T>(p) {}
+
+
+
+
+    ~LocalArray() {
+        delete[] LocalPointerBase<T>::ptr;
+    }
+
+
+
+
+
+
+    void adoptInstead(T *p) {
+        delete[] LocalPointerBase<T>::ptr;
+        LocalPointerBase<T>::ptr=p;
+    }
+
+
+
+
+
+
+
+    T &operator[](ptrdiff_t i) const { return LocalPointerBase<T>::ptr[i]; }
+};
+# 297 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+} }
+# 31 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h" 2
+
+
+
+
+
+
+extern "C" void *
+uprv_malloc_48(size_t s);
+
+extern "C" void *
+uprv_realloc_48(void *mem, size_t size);
+
+extern "C" void
+uprv_free_48(void *mem);
+
+
+
+
+
+typedef union {
+    long t1;
+    double t2;
+    void *t3;
+} UAlignedMemory;
+# 83 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+extern "C" UBool
+cmemory_inUse_48(void);
+
+
+
+
+
+
+extern "C" UBool
+cmemory_cleanup_48(void);
+
+
+
+extern "C++" { namespace icu_48 {
+# 105 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+template<typename T>
+class LocalMemory : public LocalPointerBase<T> {
+public:
+
+
+
+
+    explicit LocalMemory(T *p=__null) : LocalPointerBase<T>(p) {}
+
+
+
+    ~LocalMemory() {
+        uprv_free_48(LocalPointerBase<T>::ptr);
+    }
+
+
+
+
+
+    void adoptInstead(T *p) {
+        uprv_free_48(LocalPointerBase<T>::ptr);
+        LocalPointerBase<T>::ptr=p;
+    }
+# 136 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline T *allocateInsteadAndReset(int32_t newCapacity=1);
+# 148 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline T *allocateInsteadAndCopy(int32_t newCapacity=1, int32_t length=0);
+
+
+
+
+
+
+    T &operator[](ptrdiff_t i) const { return LocalPointerBase<T>::ptr[i]; }
+};
+
+template<typename T>
+inline T *LocalMemory<T>::allocateInsteadAndReset(int32_t newCapacity) {
+    if(newCapacity>0) {
+        T *p=(T *)uprv_malloc_48(newCapacity*sizeof(T));
+        if(p!=__null) {
+            :: memset(p, 0, newCapacity*sizeof(T));
+            uprv_free_48(LocalPointerBase<T>::ptr);
+            LocalPointerBase<T>::ptr=p;
+        }
+        return p;
+    } else {
+        return __null;
+    }
+}
+
+
+template<typename T>
+inline T *LocalMemory<T>::allocateInsteadAndCopy(int32_t newCapacity, int32_t length) {
+    if(newCapacity>0) {
+        T *p=(T *)uprv_malloc_48(newCapacity*sizeof(T));
+        if(p!=__null) {
+            if(length>0) {
+                if(length>newCapacity) {
+                    length=newCapacity;
+                }
+                :: memcpy(p, LocalPointerBase<T>::ptr, length*sizeof(T));
+            }
+            uprv_free_48(LocalPointerBase<T>::ptr);
+            LocalPointerBase<T>::ptr=p;
+        }
+        return p;
+    } else {
+        return __null;
+    }
+}
+# 205 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+template<typename T, int32_t stackCapacity>
+class MaybeStackArray {
+public:
+
+
+
+    MaybeStackArray() : ptr(stackArray), capacity(stackCapacity), needToRelease(0) {}
+
+
+
+    ~MaybeStackArray() { releaseArray(); }
+
+
+
+
+    int32_t getCapacity() const { return capacity; }
+
+
+
+
+    T *getAlias() const { return ptr; }
+
+
+
+
+    T *getArrayLimit() const { return getAlias()+capacity; }
+
+
+
+
+
+    operator T *() const { return ptr; }
+
+
+
+
+
+
+    T &operator[](ptrdiff_t i) { return ptr[i]; }
+
+
+
+
+
+
+    void aliasInstead(T *otherArray, int32_t otherCapacity) {
+        if(otherArray!=__null && otherCapacity>0) {
+            releaseArray();
+            ptr=otherArray;
+            capacity=otherCapacity;
+            needToRelease=0;
+        }
+    }
+# 268 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline T *resize(int32_t newCapacity, int32_t length=0);
+# 279 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline T *orphanOrClone(int32_t length, int32_t &resultCapacity);
+private:
+    T *ptr;
+    int32_t capacity;
+    UBool needToRelease;
+    T stackArray[stackCapacity];
+    void releaseArray() {
+        if(needToRelease) {
+            uprv_free_48(ptr);
+        }
+    }
+
+    bool operator==(const MaybeStackArray & ) {return 0;}
+    bool operator!=(const MaybeStackArray & ) {return 1;}
+
+    MaybeStackArray(const MaybeStackArray & ) {}
+    void operator=(const MaybeStackArray & ) {}
+# 310 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+};
+
+template<typename T, int32_t stackCapacity>
+inline T *MaybeStackArray<T, stackCapacity>::resize(int32_t newCapacity, int32_t length) {
+    if(newCapacity>0) {
+        T *p=(T *)uprv_malloc_48(newCapacity*sizeof(T));
+        if(p!=__null) {
+            if(length>0) {
+                if(length>capacity) {
+                    length=capacity;
+                }
+                if(length>newCapacity) {
+                    length=newCapacity;
+                }
+                :: memcpy(p, ptr, length*sizeof(T));
+            }
+            releaseArray();
+            ptr=p;
+            capacity=newCapacity;
+            needToRelease=1;
+        }
+        return p;
+    } else {
+        return __null;
+    }
+}
+
+template<typename T, int32_t stackCapacity>
+inline T *MaybeStackArray<T, stackCapacity>::orphanOrClone(int32_t length, int32_t &resultCapacity) {
+    T *p;
+    if(needToRelease) {
+        p=ptr;
+    } else if(length<=0) {
+        return __null;
+    } else {
+        if(length>capacity) {
+            length=capacity;
+        }
+        p=(T *)uprv_malloc_48(length*sizeof(T));
+        if(p==__null) {
+            return __null;
+        }
+        :: memcpy(p, ptr, length*sizeof(T));
+    }
+    resultCapacity=length;
+    ptr=stackArray;
+    capacity=stackCapacity;
+    needToRelease=0;
+    return p;
+}
+# 371 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+template<typename H, typename T, int32_t stackCapacity>
+class MaybeStackHeaderAndArray {
+public:
+
+
+
+    MaybeStackHeaderAndArray() : ptr(&stackHeader), capacity(stackCapacity), needToRelease(0) {}
+
+
+
+    ~MaybeStackHeaderAndArray() { releaseMemory(); }
+
+
+
+
+    int32_t getCapacity() const { return capacity; }
+
+
+
+
+    H *getAlias() const { return ptr; }
+
+
+
+
+    T *getArrayStart() const { return reinterpret_cast<T *>(getAlias()+1); }
+
+
+
+
+    T *getArrayLimit() const { return getArrayStart()+capacity; }
+
+
+
+
+
+    operator H *() const { return ptr; }
+
+
+
+
+
+
+    T &operator[](ptrdiff_t i) { return getArrayStart()[i]; }
+
+
+
+
+
+
+    void aliasInstead(H *otherMemory, int32_t otherCapacity) {
+        if(otherMemory!=__null && otherCapacity>0) {
+            releaseMemory();
+            ptr=otherMemory;
+            capacity=otherCapacity;
+            needToRelease=0;
+        }
+    }
+# 440 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline H *resize(int32_t newCapacity, int32_t length=0);
+# 451 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline H *orphanOrClone(int32_t length, int32_t &resultCapacity);
+private:
+    H *ptr;
+    int32_t capacity;
+    UBool needToRelease;
+
+    H stackHeader;
+    T stackArray[stackCapacity];
+    void releaseMemory() {
+        if(needToRelease) {
+            uprv_free_48(ptr);
+        }
+    }
+
+    bool operator==(const MaybeStackHeaderAndArray & ) {return 0;}
+    bool operator!=(const MaybeStackHeaderAndArray & ) {return 1;}
+
+    MaybeStackHeaderAndArray(const MaybeStackHeaderAndArray & ) {}
+    void operator=(const MaybeStackHeaderAndArray & ) {}
+# 479 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+};
+
+template<typename H, typename T, int32_t stackCapacity>
+inline H *MaybeStackHeaderAndArray<H, T, stackCapacity>::resize(int32_t newCapacity,
+                                                                int32_t length) {
+    if(newCapacity>=0) {
+        H *p=(H *)uprv_malloc_48(sizeof(H)+newCapacity*sizeof(T));
+        if(p!=__null) {
+            if(length<0) {
+                length=0;
+            } else if(length>0) {
+                if(length>capacity) {
+                    length=capacity;
+                }
+                if(length>newCapacity) {
+                    length=newCapacity;
+                }
+            }
+            :: memcpy(p, ptr, sizeof(H)+length*sizeof(T));
+            releaseMemory();
+            ptr=p;
+            capacity=newCapacity;
+            needToRelease=1;
+        }
+        return p;
+    } else {
+        return __null;
+    }
+}
+
+template<typename H, typename T, int32_t stackCapacity>
+inline H *MaybeStackHeaderAndArray<H, T, stackCapacity>::orphanOrClone(int32_t length,
+                                                                       int32_t &resultCapacity) {
+    H *p;
+    if(needToRelease) {
+        p=ptr;
+    } else {
+        if(length<0) {
+            length=0;
+        } else if(length>capacity) {
+            length=capacity;
+        }
+        p=(H *)uprv_malloc_48(sizeof(H)+length*sizeof(T));
+        if(p==__null) {
+            return __null;
+        }
+        :: memcpy(p, ptr, sizeof(H)+length*sizeof(T));
+    }
+    resultCapacity=length;
+    ptr=&stackHeader;
+    capacity=stackCapacity;
+    needToRelease=0;
+    return p;
+}
+
+} }
+# 31 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h" 1
+# 21 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h" 1
+# 24 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h"
+# 1 "c:/marmalade/5.2/s3e/h/std/stdarg.h" 1
+# 54 "c:/marmalade/5.2/s3e/h/std/stdarg.h"
+typedef __builtin_va_list va_list;
+# 25 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h" 2
+
+
+
+
+extern "C" {
+
+struct UDataSwapper;
+typedef struct UDataSwapper UDataSwapper;
+# 87 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h"
+typedef int32_t
+UDataSwapFn(const UDataSwapper *ds,
+            const void *inData, int32_t length, void *outData,
+            UErrorCode *pErrorCode);
+
+
+
+
+
+typedef uint16_t
+UDataReadUInt16(uint16_t x);
+
+
+
+
+
+typedef uint32_t
+UDataReadUInt32(uint32_t x);
+
+
+
+
+
+typedef void
+UDataWriteUInt16(uint16_t *p, uint16_t x);
+
+
+
+
+
+typedef void
+UDataWriteUInt32(uint32_t *p, uint32_t x);
+# 130 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h"
+typedef int32_t
+UDataCompareInvChars(const UDataSwapper *ds,
+                     const char *outString, int32_t outLength,
+                     const UChar *localString, int32_t localLength);
+# 146 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h"
+typedef void
+UDataPrintError(void *context, const char *fmt, va_list args);
+
+struct UDataSwapper {
+
+    UBool inIsBigEndian;
+
+    uint8_t inCharset;
+
+    UBool outIsBigEndian;
+
+    uint8_t outCharset;
+
+
+
+
+    UDataReadUInt16 *readUInt16;
+
+    UDataReadUInt32 *readUInt32;
+
+    UDataCompareInvChars *compareInvChars;
+
+
+
+
+    UDataWriteUInt16 *writeUInt16;
+
+    UDataWriteUInt32 *writeUInt32;
+
+
+
+
+    UDataSwapFn *swapArray16;
+
+    UDataSwapFn *swapArray32;
+
+    UDataSwapFn *swapInvChars;
+
+
+
+
+
+
+    UDataPrintError *printError;
+
+    void *printErrorContext;
+};
+
+}
+
+extern "C" UDataSwapper *
+udata_openSwapper_48(UBool inIsBigEndian, uint8_t inCharset,
+                  UBool outIsBigEndian, uint8_t outCharset,
+                  UErrorCode *pErrorCode);
+# 210 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h"
+extern "C" UDataSwapper *
+udata_openSwapperForInputData_48(const void *data, int32_t length,
+                              UBool outIsBigEndian, uint8_t outCharset,
+                              UErrorCode *pErrorCode);
+
+extern "C" void
+udata_closeSwapper_48(UDataSwapper *ds);
+# 227 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h"
+extern "C" int32_t
+udata_swapDataHeader_48(const UDataSwapper *ds,
+                     const void *inData, int32_t length, void *outData,
+                     UErrorCode *pErrorCode);
+
+
+
+
+
+extern "C" int16_t
+udata_readInt16_48(const UDataSwapper *ds, int16_t x);
+
+
+
+
+
+extern "C" int32_t
+udata_readInt32_48(const UDataSwapper *ds, int32_t x);
+
+
+
+
+
+
+extern "C" int32_t
+udata_swapInvStringBlock_48(const UDataSwapper *ds,
+                         const void *inData, int32_t length, void *outData,
+                         UErrorCode *pErrorCode);
+
+extern "C" void
+udata_printError_48(const UDataSwapper *ds,
+                 const char *fmt,
+                 ...);
+# 269 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.h"
+extern "C" int32_t
+uprv_ebcdicFromAscii_48(const UDataSwapper *ds,
+                     const void *inData, int32_t length, void *outData,
+                     UErrorCode *pErrorCode);
+
+
+
+
+
+extern "C" int32_t
+uprv_copyAscii_48(const UDataSwapper *ds,
+               const void *inData, int32_t length, void *outData,
+               UErrorCode *pErrorCode);
+
+
+
+
+
+extern "C" int32_t
+uprv_asciiFromEbcdic_48(const UDataSwapper *ds,
+                     const void *inData, int32_t length, void *outData,
+                     UErrorCode *pErrorCode);
+
+
+
+
+
+extern "C" int32_t
+uprv_copyEbcdic_48(const UDataSwapper *ds,
+                const void *inData, int32_t length, void *outData,
+                UErrorCode *pErrorCode);
+
+
+
+
+
+extern "C" int32_t
+uprv_compareInvAscii_48(const UDataSwapper *ds,
+                     const char *outString, int32_t outLength,
+                     const UChar *localString, int32_t localLength);
+
+
+
+
+
+extern "C" int32_t
+uprv_compareInvEbcdic_48(const UDataSwapper *ds,
+                      const char *outString, int32_t outLength,
+                      const UChar *localString, int32_t localLength);
+# 22 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h" 2
+
+extern "C" {
+
+struct UTrie;
+
+typedef struct UTrie UTrie;
+# 60 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+struct UTrie2;
+typedef struct UTrie2 UTrie2;
+
+
+
+
+
+
+enum UTrie2ValueBits {
+
+    UTRIE2_16_VALUE_BITS,
+
+    UTRIE2_32_VALUE_BITS,
+
+    UTRIE2_COUNT_VALUE_BITS
+};
+typedef enum UTrie2ValueBits UTrie2ValueBits;
+# 97 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" UTrie2 *
+utrie2_openFromSerialized_48(UTrie2ValueBits valueBits,
+                          const void *data, int32_t length, int32_t *pActualLength,
+                          UErrorCode *pErrorCode);
+# 123 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" UTrie2 *
+utrie2_openDummy_48(UTrie2ValueBits valueBits,
+                 uint32_t initialValue, uint32_t errorValue,
+                 UErrorCode *pErrorCode);
+# 138 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" uint32_t
+utrie2_get32_48(const UTrie2 *trie, UChar32 c);
+# 151 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+typedef uint32_t
+UTrie2EnumValue(const void *context, uint32_t value);
+# 167 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+typedef UBool
+UTrie2EnumRange(const void *context, UChar32 start, UChar32 end, uint32_t value);
+# 188 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" void
+utrie2_enum_48(const UTrie2 *trie,
+            UTrie2EnumValue *enumValue, UTrie2EnumRange *enumRange, const void *context);
+# 205 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" UTrie2 *
+utrie2_open_48(uint32_t initialValue, uint32_t errorValue, UErrorCode *pErrorCode);
+# 216 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" UTrie2 *
+utrie2_clone_48(const UTrie2 *other, UErrorCode *pErrorCode);
+# 228 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" UTrie2 *
+utrie2_cloneAsThawed_48(const UTrie2 *other, UErrorCode *pErrorCode);
+
+
+
+
+
+
+extern "C" void
+utrie2_close_48(UTrie2 *trie);
+# 248 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" void
+utrie2_set32_48(UTrie2 *trie, UChar32 c, uint32_t value, UErrorCode *pErrorCode);
+# 264 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" void
+utrie2_setRange32_48(UTrie2 *trie,
+                  UChar32 start, UChar32 end,
+                  uint32_t value, UBool overwrite,
+                  UErrorCode *pErrorCode);
+# 289 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" void
+utrie2_freeze_48(UTrie2 *trie, UTrie2ValueBits valueBits, UErrorCode *pErrorCode);
+# 299 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" UBool
+utrie2_isFrozen_48(const UTrie2 *trie);
+# 320 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" int32_t
+utrie2_serialize_48(UTrie2 *trie,
+                 void *data, int32_t capacity,
+                 UErrorCode *pErrorCode);
+# 340 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" int32_t
+utrie2_getVersion_48(const void *data, int32_t length, UBool anyEndianOk);
+
+
+
+
+
+extern "C" int32_t
+utrie2_swap_48(const UDataSwapper *ds,
+            const void *inData, int32_t length, void *outData,
+            UErrorCode *pErrorCode);
+
+
+
+
+
+extern "C" int32_t
+utrie2_swapAnyVersion_48(const UDataSwapper *ds,
+                      const void *inData, int32_t length, void *outData,
+                      UErrorCode *pErrorCode);
+# 371 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" UTrie2 *
+utrie2_fromUTrie_48(const UTrie *trie1, uint32_t errorValue, UErrorCode *pErrorCode);
+# 530 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" uint32_t
+utrie2_get32FromLeadSurrogateCodeUnit_48(const UTrie2 *trie, UChar32 c);
+# 558 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" void
+utrie2_enumForLeadSurrogate_48(const UTrie2 *trie, UChar32 lead,
+                            UTrie2EnumValue *enumValue, UTrie2EnumRange *enumRange,
+                            const void *context);
+# 572 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" void
+utrie2_set32ForLeadSurrogateCodeUnit_48(UTrie2 *trie,
+                                     UChar32 lead, uint32_t value,
+                                     UErrorCode *pErrorCode);
+# 617 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+}
+
+
+
+
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h" 1
+# 24 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h" 1
+# 22 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+extern "C++" { namespace icu_48 {
+# 101 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+class UMemory {
+public:
+# 120 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+    static void * operator new(size_t size) throw();
+
+
+
+
+
+
+    static void * operator new[](size_t size) throw();
+# 137 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+    static void operator delete(void *p) throw();
+
+
+
+
+
+
+    static void operator delete[](void *p) throw();
+
+
+
+
+
+
+
+    static inline void * operator new(size_t, void *ptr) throw() { return ptr; }
+
+
+
+
+
+
+    static inline void operator delete(void *, void *) throw() {}
+# 191 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+};
+# 215 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+class UObject : public UMemory {
+public:
+
+
+
+
+
+    virtual ~UObject();
+
+
+
+
+
+
+    virtual UClassID getDynamicClassID() const = 0;
+
+protected:
+# 288 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+};
+# 350 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+} }
+# 25 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/umutex.h" 1
+# 22 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/umutex.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h" 1
+# 52 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+extern "C" void
+u_init_48(UErrorCode *status);
+# 100 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+extern "C" void
+u_cleanup_48(void);
+# 113 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+typedef void *UMTX;
+# 131 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+typedef void UMtxInitFn (const void *context, UMTX *mutex, UErrorCode* status);
+# 143 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+typedef void UMtxFn (const void *context, UMTX *mutex);
+# 165 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+extern "C" void
+u_setMutexFunctions_48(const void *context, UMtxInitFn *init, UMtxFn *destroy, UMtxFn *lock, UMtxFn *unlock,
+                    UErrorCode *status);
+# 178 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+typedef int32_t UMtxAtomicFn(const void *context, int32_t *p);
+# 195 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+extern "C" void
+u_setAtomicIncDecFunctions_48(const void *context, UMtxAtomicFn *inc, UMtxAtomicFn *dec,
+                    UErrorCode *status);
+# 209 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+typedef void * UMemAllocFn(const void *context, size_t size);
+# 218 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+typedef void * UMemReallocFn(const void *context, void *mem, size_t size);
+# 229 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+typedef void UMemFreeFn (const void *context, void *mem);
+# 247 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uclean.h"
+extern "C" void
+u_setMemoryFunctions_48(const void *context, UMemAllocFn *a, UMemReallocFn *r, UMemFreeFn *f,
+                    UErrorCode *status);
+# 23 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/umutex.h" 2
+# 141 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/umutex.h"
+extern "C" void umtx_lock_48 ( UMTX* mutex );
+
+
+
+
+
+
+extern "C" void umtx_unlock_48 ( UMTX* mutex );
+# 159 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/umutex.h"
+extern "C" void umtx_init_48 ( UMTX* mutex );
+# 169 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/umutex.h"
+extern "C" void umtx_destroy_48( UMTX *mutex );
+# 180 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/umutex.h"
+extern "C" int32_t umtx_atomic_inc_48(int32_t *);
+extern "C" int32_t umtx_atomic_dec_48(int32_t *);
+# 26 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h" 2
+
+extern "C++" { namespace icu_48 {
+# 51 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h"
+class Mutex : public UMemory {
+public:
+  inline Mutex(UMTX *mutex = __null);
+  inline ~Mutex();
+
+private:
+  UMTX *fMutex;
+
+  Mutex(const Mutex &other);
+  Mutex &operator=(const Mutex &other);
+};
+
+inline Mutex::Mutex(UMTX *mutex)
+  : fMutex(mutex)
+{
+  umtx_lock_48(fMutex);
+}
+
+inline Mutex::~Mutex()
+{
+  umtx_unlock_48(fMutex);
+}
+# 82 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h"
+typedef void *InstantiatorFn(const void *context, UErrorCode &errorCode);
+# 92 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h"
+struct SimpleSingleton {
+    void *fInstance;
+# 102 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h"
+    void *getInstance(InstantiatorFn *instantiator, const void *context,
+                      void *&duplicate,
+                      UErrorCode &errorCode);
+
+
+
+
+
+    void reset() { fInstance=__null; }
+};
+# 120 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h"
+template<typename T>
+class SimpleSingletonWrapper {
+public:
+    SimpleSingletonWrapper(SimpleSingleton &s) : singleton(s) {}
+    void deleteInstance() {
+        delete (T *)singleton.fInstance;
+        singleton.reset();
+    }
+    T *getInstance(InstantiatorFn *instantiator, const void *context,
+                   UErrorCode &errorCode) {
+        void *duplicate;
+        T *instance=(T *)singleton.getInstance(instantiator, context, duplicate, errorCode);
+        delete (T *)duplicate;
+        return instance;
+    }
+private:
+    SimpleSingleton &singleton;
+};
+
+
+
+
+
+
+
+struct TriStateSingleton {
+    void *fInstance;
+    UErrorCode fErrorCode;
+# 158 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h"
+    void *getInstance(InstantiatorFn *instantiator, const void *context,
+                      void *&duplicate,
+                      UErrorCode &errorCode);
+
+
+
+
+
+    void reset();
+};
+# 176 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.h"
+template<typename T>
+class TriStateSingletonWrapper {
+public:
+    TriStateSingletonWrapper(TriStateSingleton &s) : singleton(s) {}
+    void deleteInstance() {
+        delete (T *)singleton.fInstance;
+        singleton.reset();
+    }
+    T *getInstance(InstantiatorFn *instantiator, const void *context,
+                   UErrorCode &errorCode) {
+        void *duplicate;
+        T *instance=(T *)singleton.getInstance(instantiator, context, duplicate, errorCode);
+        delete (T *)duplicate;
+        return instance;
+    }
+private:
+    TriStateSingleton &singleton;
+};
+
+} }
+# 624 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h" 2
+
+extern "C++" { namespace icu_48 {
+
+
+class UTrie2StringIterator : public UMemory {
+public:
+    UTrie2StringIterator(const UTrie2 *t, const UChar *p) :
+        trie(t), codePointStart(p), codePointLimit(p), codePoint((-1)) {}
+
+    const UTrie2 *trie;
+    const UChar *codePointStart, *codePointLimit;
+    UChar32 codePoint;
+};
+
+class BackwardUTrie2StringIterator : public UTrie2StringIterator {
+public:
+    BackwardUTrie2StringIterator(const UTrie2 *t, const UChar *s, const UChar *p) :
+        UTrie2StringIterator(t, p), start(s) {}
+
+    uint16_t previous16();
+
+    const UChar *start;
+};
+
+class ForwardUTrie2StringIterator : public UTrie2StringIterator {
+public:
+
+
+    ForwardUTrie2StringIterator(const UTrie2 *t, const UChar *p, const UChar *l) :
+        UTrie2StringIterator(t, p), limit(l) {}
+
+    uint16_t next16();
+
+    const UChar *limit;
+};
+
+class UTrie2Singleton {
+public:
+    UTrie2Singleton(SimpleSingleton &s) : singleton(s) {}
+    void deleteInstance() {
+        utrie2_close_48((UTrie2 *)singleton.fInstance);
+        singleton.reset();
+    }
+    UTrie2 *getInstance(InstantiatorFn *instantiator, const void *context,
+                        UErrorCode &errorCode);
+private:
+    SimpleSingleton &singleton;
+};
+
+} }
+
+
+
+
+
+extern "C" {
+
+
+struct UNewTrie2;
+typedef struct UNewTrie2 UNewTrie2;
+# 694 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+struct UTrie2 {
+
+    const uint16_t *index;
+    const uint16_t *data16;
+    const uint32_t *data32;
+
+    int32_t indexLength, dataLength;
+    uint16_t index2NullOffset;
+    uint16_t dataNullOffset;
+    uint32_t initialValue;
+
+    uint32_t errorValue;
+
+
+    UChar32 highStart;
+    int32_t highValueIndex;
+
+
+    void *memory;
+    int32_t length;
+    UBool isMemoryOwned;
+    UBool padding1;
+    int16_t padding2;
+    UNewTrie2 *newTrie;
+};
+
+
+
+
+
+
+
+enum {
+
+    UTRIE2_SHIFT_1=6+5,
+
+
+    UTRIE2_SHIFT_2=5,
+
+
+
+
+
+    UTRIE2_SHIFT_1_2=UTRIE2_SHIFT_1-UTRIE2_SHIFT_2,
+
+
+
+
+
+    UTRIE2_OMITTED_BMP_INDEX_1_LENGTH=0x10000>>UTRIE2_SHIFT_1,
+
+
+    UTRIE2_CP_PER_INDEX_1_ENTRY=1<<UTRIE2_SHIFT_1,
+
+
+    UTRIE2_INDEX_2_BLOCK_LENGTH=1<<UTRIE2_SHIFT_1_2,
+
+
+    UTRIE2_INDEX_2_MASK=UTRIE2_INDEX_2_BLOCK_LENGTH-1,
+
+
+    UTRIE2_DATA_BLOCK_LENGTH=1<<UTRIE2_SHIFT_2,
+
+
+    UTRIE2_DATA_MASK=UTRIE2_DATA_BLOCK_LENGTH-1,
+
+
+
+
+
+
+
+    UTRIE2_INDEX_SHIFT=2,
+
+
+    UTRIE2_DATA_GRANULARITY=1<<UTRIE2_INDEX_SHIFT,
+
+
+
+
+
+
+
+    UTRIE2_INDEX_2_OFFSET=0,
+
+
+
+
+
+
+
+    UTRIE2_LSCP_INDEX_2_OFFSET=0x10000>>UTRIE2_SHIFT_2,
+    UTRIE2_LSCP_INDEX_2_LENGTH=0x400>>UTRIE2_SHIFT_2,
+
+
+    UTRIE2_INDEX_2_BMP_LENGTH=UTRIE2_LSCP_INDEX_2_OFFSET+UTRIE2_LSCP_INDEX_2_LENGTH,
+
+
+
+
+
+    UTRIE2_UTF8_2B_INDEX_2_OFFSET=UTRIE2_INDEX_2_BMP_LENGTH,
+    UTRIE2_UTF8_2B_INDEX_2_LENGTH=0x800>>6,
+# 810 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+    UTRIE2_INDEX_1_OFFSET=UTRIE2_UTF8_2B_INDEX_2_OFFSET+UTRIE2_UTF8_2B_INDEX_2_LENGTH,
+    UTRIE2_MAX_INDEX_1_LENGTH=0x100000>>UTRIE2_SHIFT_1,
+# 823 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+    UTRIE2_BAD_UTF8_DATA_OFFSET=0x80,
+
+
+    UTRIE2_DATA_START_OFFSET=0xc0
+};
+# 836 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+extern "C" int32_t
+utrie2_internalU8NextIndex_48(const UTrie2 *trie, UChar32 c,
+                           const uint8_t *src, const uint8_t *limit);
+
+
+
+
+
+
+extern "C" int32_t
+utrie2_internalU8PrevIndex_48(const UTrie2 *trie, UChar32 c,
+                           const uint8_t *start, const uint8_t *src);
+# 990 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.h"
+}
+# 32 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2_impl.h" 1
+# 50 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2_impl.h"
+typedef struct UTrie2Header {
+
+    uint32_t signature;
+
+
+
+
+
+
+    uint16_t options;
+
+
+    uint16_t indexLength;
+
+
+    uint16_t shiftedDataLength;
+
+
+    uint16_t index2NullOffset, dataNullOffset;
+
+
+
+
+
+    uint16_t shiftedHighStart;
+} UTrie2Header;
+
+
+
+
+
+enum {
+
+    UTRIE2_OPTIONS_VALUE_BITS_MASK=0xf
+};
+# 93 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2_impl.h"
+enum {
+
+
+
+
+
+
+    UNEWTRIE2_INDEX_GAP_OFFSET=UTRIE2_INDEX_2_BMP_LENGTH,
+    UNEWTRIE2_INDEX_GAP_LENGTH=
+        ((UTRIE2_UTF8_2B_INDEX_2_LENGTH+UTRIE2_MAX_INDEX_1_LENGTH)+UTRIE2_INDEX_2_MASK)&
+        ~UTRIE2_INDEX_2_MASK,
+# 112 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2_impl.h"
+    UNEWTRIE2_MAX_INDEX_2_LENGTH=
+        (0x110000>>UTRIE2_SHIFT_2)+
+        UTRIE2_LSCP_INDEX_2_LENGTH+
+        UNEWTRIE2_INDEX_GAP_LENGTH+
+        UTRIE2_INDEX_2_BLOCK_LENGTH,
+
+    UNEWTRIE2_INDEX_1_LENGTH=0x110000>>UTRIE2_SHIFT_1
+};
+# 142 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2_impl.h"
+struct UNewTrie2 {
+    int32_t index1[UNEWTRIE2_INDEX_1_LENGTH];
+    int32_t index2[UNEWTRIE2_MAX_INDEX_2_LENGTH];
+    uint32_t *data;
+
+    uint32_t initialValue, errorValue;
+    int32_t index2Length, dataCapacity, dataLength;
+    int32_t firstFreeBlock;
+    int32_t index2NullOffset, dataNullOffset;
+    UChar32 highStart;
+    UBool isCompacted;
+# 169 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2_impl.h"
+    int32_t map[(0x110000+0x40+0x40+0x400)>>UTRIE2_SHIFT_2];
+};
+# 33 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp" 2
+
+
+
+static uint32_t
+get32(const UNewTrie2 *trie, UChar32 c, UBool fromLSCP) {
+    int32_t i2, block;
+
+    if(c>=trie->highStart && (!(((c)&0xfffffc00)==0xd800) || fromLSCP)) {
+        return trie->data[trie->dataLength-UTRIE2_DATA_GRANULARITY];
+    }
+
+    if((((c)&0xfffffc00)==0xd800) && fromLSCP) {
+        i2=(UTRIE2_LSCP_INDEX_2_OFFSET-(0xd800>>UTRIE2_SHIFT_2))+
+            (c>>UTRIE2_SHIFT_2);
+    } else {
+        i2=trie->index1[c>>UTRIE2_SHIFT_1]+
+            ((c>>UTRIE2_SHIFT_2)&UTRIE2_INDEX_2_MASK);
+    }
+    block=trie->index2[i2];
+    return trie->data[block+(c&UTRIE2_DATA_MASK)];
+}
+
+extern "C" uint32_t
+utrie2_get32_48(const UTrie2 *trie, UChar32 c) {
+    if(trie->data16!=__null) {
+        return ((trie))->index[((uint32_t)((c))<0xd800 ? (((int32_t)((((trie))->index)[(0)+(((c))>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ (((c))&UTRIE2_DATA_MASK)) : (uint32_t)((c))<=0xffff ? (((int32_t)((((trie))->index)[(((c))<=0xdbff ? UTRIE2_LSCP_INDEX_2_OFFSET-(0xd800>>UTRIE2_SHIFT_2) : 0)+(((c))>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ (((c))&UTRIE2_DATA_MASK)) : (uint32_t)((c))>0x10ffff ? ((trie)->indexLength)+UTRIE2_BAD_UTF8_DATA_OFFSET : ((c))>=((trie))->highStart ? ((trie))->highValueIndex : (((int32_t)((((trie))->index)[ (((trie))->index)[(UTRIE2_INDEX_1_OFFSET-UTRIE2_OMITTED_BMP_INDEX_1_LENGTH)+ (((c))>>UTRIE2_SHIFT_1)]+ ((((c))>>UTRIE2_SHIFT_2)&UTRIE2_INDEX_2_MASK)]) <<UTRIE2_INDEX_SHIFT)+ (((c))&UTRIE2_DATA_MASK)))];
+    } else if(trie->data32!=__null) {
+        return ((trie))->data32[((uint32_t)((c))<0xd800 ? (((int32_t)((((trie))->index)[(0)+(((c))>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ (((c))&UTRIE2_DATA_MASK)) : (uint32_t)((c))<=0xffff ? (((int32_t)((((trie))->index)[(((c))<=0xdbff ? UTRIE2_LSCP_INDEX_2_OFFSET-(0xd800>>UTRIE2_SHIFT_2) : 0)+(((c))>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ (((c))&UTRIE2_DATA_MASK)) : (uint32_t)((c))>0x10ffff ? (0)+UTRIE2_BAD_UTF8_DATA_OFFSET : ((c))>=((trie))->highStart ? ((trie))->highValueIndex : (((int32_t)((((trie))->index)[ (((trie))->index)[(UTRIE2_INDEX_1_OFFSET-UTRIE2_OMITTED_BMP_INDEX_1_LENGTH)+ (((c))>>UTRIE2_SHIFT_1)]+ ((((c))>>UTRIE2_SHIFT_2)&UTRIE2_INDEX_2_MASK)]) <<UTRIE2_INDEX_SHIFT)+ (((c))&UTRIE2_DATA_MASK)))];
+    } else if((uint32_t)c>0x10ffff) {
+        return trie->errorValue;
+    } else {
+        return get32(trie->newTrie, c, 1);
+    }
+}
+
+extern "C" uint32_t
+utrie2_get32FromLeadSurrogateCodeUnit_48(const UTrie2 *trie, UChar32 c) {
+    if(!(((c)&0xfffffc00)==0xd800)) {
+        return trie->errorValue;
+    }
+    if(trie->data16!=__null) {
+        return ((trie))->index[(((int32_t)((((trie))->index)[(0)+((c)>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ ((c)&UTRIE2_DATA_MASK))];
+    } else if(trie->data32!=__null) {
+        return ((trie))->data32[(((int32_t)((((trie))->index)[(0)+((c)>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ ((c)&UTRIE2_DATA_MASK))];
+    } else {
+        return get32(trie->newTrie, c, 0);
+    }
+}
+
+static inline int32_t
+u8Index(const UTrie2 *trie, UChar32 c, int32_t i) {
+    int32_t idx=
+        ((uint32_t)(c)<0xd800 ? (((int32_t)(((trie)->index)[(0)+((c)>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ ((c)&UTRIE2_DATA_MASK)) : (uint32_t)(c)<=0xffff ? (((int32_t)(((trie)->index)[((c)<=0xdbff ? UTRIE2_LSCP_INDEX_2_OFFSET-(0xd800>>UTRIE2_SHIFT_2) : 0)+((c)>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ ((c)&UTRIE2_DATA_MASK)) : (uint32_t)(c)>0x10ffff ? (trie->data32==__null ? trie->indexLength : 0)+UTRIE2_BAD_UTF8_DATA_OFFSET : (c)>=(trie)->highStart ? (trie)->highValueIndex : (((int32_t)(((trie)->index)[ ((trie)->index)[(UTRIE2_INDEX_1_OFFSET-UTRIE2_OMITTED_BMP_INDEX_1_LENGTH)+ ((c)>>UTRIE2_SHIFT_1)]+ (((c)>>UTRIE2_SHIFT_2)&UTRIE2_INDEX_2_MASK)]) <<UTRIE2_INDEX_SHIFT)+ ((c)&UTRIE2_DATA_MASK)));
+
+
+
+    return (idx<<3)|i;
+}
+
+extern "C" int32_t
+utrie2_internalU8NextIndex_48(const UTrie2 *trie, UChar32 c,
+                           const uint8_t *src, const uint8_t *limit) {
+    int32_t i, length;
+    i=0;
+
+    if((limit-src)<=7) {
+        length=(int32_t)(limit-src);
+    } else {
+        length=7;
+    }
+    c=utf8_nextCharSafeBody_48(src, &i, length, c, -1);
+    return u8Index(trie, c, i);
+}
+
+extern "C" int32_t
+utrie2_internalU8PrevIndex_48(const UTrie2 *trie, UChar32 c,
+                           const uint8_t *start, const uint8_t *src) {
+    int32_t i, length;
+
+    if((src-start)<=7) {
+        i=length=(int32_t)(src-start);
+    } else {
+        i=length=7;
+        start=src-7;
+    }
+    c=utf8_prevCharSafeBody_48(start, 0, &i, c, -1);
+    i=length-i;
+    return u8Index(trie, c, i);
+}
+
+extern "C" UTrie2 *
+utrie2_openFromSerialized_48(UTrie2ValueBits valueBits,
+                          const void *data, int32_t length, int32_t *pActualLength,
+                          UErrorCode *pErrorCode) {
+    const UTrie2Header *header;
+    const uint16_t *p16;
+    int32_t actualLength;
+
+    UTrie2 tempTrie;
+    UTrie2 *trie;
+
+    if(U_FAILURE(*pErrorCode)) {
+        return 0;
+    }
+
+    if( length<=0 || ((((ptrdiff_t)(char *)(data)) & (3))!=0) ||
+        valueBits<0 || UTRIE2_COUNT_VALUE_BITS<=valueBits
+    ) {
+        *pErrorCode=U_ILLEGAL_ARGUMENT_ERROR;
+        return 0;
+    }
+
+
+    if(length<(int32_t)sizeof(UTrie2Header)) {
+        *pErrorCode=U_INVALID_FORMAT_ERROR;
+        return 0;
+    }
+
+
+    header=(const UTrie2Header *)data;
+    if(header->signature!=0x54726932) {
+        *pErrorCode=U_INVALID_FORMAT_ERROR;
+        return 0;
+    }
+
+
+    if(valueBits!=(UTrie2ValueBits)(header->options&UTRIE2_OPTIONS_VALUE_BITS_MASK)) {
+        *pErrorCode=U_INVALID_FORMAT_ERROR;
+        return 0;
+    }
+
+
+    :: memset(&tempTrie, 0, sizeof(tempTrie));
+    tempTrie.indexLength=header->indexLength;
+    tempTrie.dataLength=header->shiftedDataLength<<UTRIE2_INDEX_SHIFT;
+    tempTrie.index2NullOffset=header->index2NullOffset;
+    tempTrie.dataNullOffset=header->dataNullOffset;
+
+    tempTrie.highStart=header->shiftedHighStart<<UTRIE2_SHIFT_1;
+    tempTrie.highValueIndex=tempTrie.dataLength-UTRIE2_DATA_GRANULARITY;
+    if(valueBits==UTRIE2_16_VALUE_BITS) {
+        tempTrie.highValueIndex+=tempTrie.indexLength;
+    }
+
+
+    actualLength=(int32_t)sizeof(UTrie2Header)+tempTrie.indexLength*2;
+    if(valueBits==UTRIE2_16_VALUE_BITS) {
+        actualLength+=tempTrie.dataLength*2;
+    } else {
+        actualLength+=tempTrie.dataLength*4;
+    }
+    if(length<actualLength) {
+        *pErrorCode=U_INVALID_FORMAT_ERROR;
+        return 0;
+    }
+
+
+    trie=(UTrie2 *)uprv_malloc_48(sizeof(UTrie2));
+    if(trie==__null) {
+        *pErrorCode=U_MEMORY_ALLOCATION_ERROR;
+        return 0;
+    }
+    :: memcpy(trie, &tempTrie, sizeof(tempTrie));
+    trie->memory=(uint32_t *)data;
+    trie->length=actualLength;
+    trie->isMemoryOwned=0;
+
+
+    p16=(const uint16_t *)(header+1);
+    trie->index=p16;
+    p16+=trie->indexLength;
+
+
+    switch(valueBits) {
+    case UTRIE2_16_VALUE_BITS:
+        trie->data16=p16;
+        trie->data32=__null;
+        trie->initialValue=trie->index[trie->dataNullOffset];
+        trie->errorValue=trie->data16[UTRIE2_BAD_UTF8_DATA_OFFSET];
+        break;
+    case UTRIE2_32_VALUE_BITS:
+        trie->data16=__null;
+        trie->data32=(const uint32_t *)p16;
+        trie->initialValue=trie->data32[trie->dataNullOffset];
+        trie->errorValue=trie->data32[UTRIE2_BAD_UTF8_DATA_OFFSET];
+        break;
+    default:
+        *pErrorCode=U_INVALID_FORMAT_ERROR;
+        return 0;
+    }
+
+    if(pActualLength!=__null) {
+        *pActualLength=actualLength;
+    }
+    return trie;
+}
+
+extern "C" UTrie2 *
+utrie2_openDummy_48(UTrie2ValueBits valueBits,
+                 uint32_t initialValue, uint32_t errorValue,
+                 UErrorCode *pErrorCode) {
+    UTrie2 *trie;
+    UTrie2Header *header;
+    uint32_t *p;
+    uint16_t *dest16;
+    int32_t indexLength, dataLength, length, i;
+    int32_t dataMove;
+
+    if(U_FAILURE(*pErrorCode)) {
+        return 0;
+    }
+
+    if(valueBits<0 || UTRIE2_COUNT_VALUE_BITS<=valueBits) {
+        *pErrorCode=U_ILLEGAL_ARGUMENT_ERROR;
+        return 0;
+    }
+
+
+    indexLength=UTRIE2_INDEX_1_OFFSET;
+    dataLength=UTRIE2_DATA_START_OFFSET+UTRIE2_DATA_GRANULARITY;
+    length=(int32_t)sizeof(UTrie2Header)+indexLength*2;
+    if(valueBits==UTRIE2_16_VALUE_BITS) {
+        length+=dataLength*2;
+    } else {
+        length+=dataLength*4;
+    }
+
+
+    trie=(UTrie2 *)uprv_malloc_48(sizeof(UTrie2));
+    if(trie==__null) {
+        *pErrorCode=U_MEMORY_ALLOCATION_ERROR;
+        return 0;
+    }
+    :: memset(trie, 0, sizeof(UTrie2));
+    trie->memory=uprv_malloc_48(length);
+    if(trie->memory==__null) {
+        uprv_free_48(trie);
+        *pErrorCode=U_MEMORY_ALLOCATION_ERROR;
+        return 0;
+    }
+    trie->length=length;
+    trie->isMemoryOwned=1;
+
+
+    if(valueBits==UTRIE2_16_VALUE_BITS) {
+        dataMove=indexLength;
+    } else {
+        dataMove=0;
+    }
+
+    trie->indexLength=indexLength;
+    trie->dataLength=dataLength;
+    trie->index2NullOffset=UTRIE2_INDEX_2_OFFSET;
+    trie->dataNullOffset=(uint16_t)dataMove;
+    trie->initialValue=initialValue;
+    trie->errorValue=errorValue;
+    trie->highStart=0;
+    trie->highValueIndex=dataMove+UTRIE2_DATA_START_OFFSET;
+
+
+    header=(UTrie2Header *)trie->memory;
+
+    header->signature=0x54726932;
+    header->options=(uint16_t)valueBits;
+
+    header->indexLength=(uint16_t)indexLength;
+    header->shiftedDataLength=(uint16_t)(dataLength>>UTRIE2_INDEX_SHIFT);
+    header->index2NullOffset=(uint16_t)UTRIE2_INDEX_2_OFFSET;
+    header->dataNullOffset=(uint16_t)dataMove;
+    header->shiftedHighStart=0;
+
+
+    dest16=(uint16_t *)(header+1);
+    trie->index=dest16;
+
+
+    for(i=0; i<UTRIE2_INDEX_2_BMP_LENGTH; ++i) {
+        *dest16++=(uint16_t)(dataMove>>UTRIE2_INDEX_SHIFT);
+    }
+
+
+    for(i=0; i<(0xc2-0xc0); ++i) {
+        *dest16++=(uint16_t)(dataMove+UTRIE2_BAD_UTF8_DATA_OFFSET);
+    }
+    for(; i<(0xe0-0xc0); ++i) {
+        *dest16++=(uint16_t)dataMove;
+    }
+
+
+    switch(valueBits) {
+    case UTRIE2_16_VALUE_BITS:
+
+        trie->data16=dest16;
+        trie->data32=__null;
+        for(i=0; i<0x80; ++i) {
+            *dest16++=(uint16_t)initialValue;
+        }
+        for(; i<0xc0; ++i) {
+            *dest16++=(uint16_t)errorValue;
+        }
+
+        for(i=0; i<UTRIE2_DATA_GRANULARITY; ++i) {
+            *dest16++=(uint16_t)initialValue;
+        }
+        break;
+    case UTRIE2_32_VALUE_BITS:
+
+        p=(uint32_t *)dest16;
+        trie->data16=__null;
+        trie->data32=p;
+        for(i=0; i<0x80; ++i) {
+            *p++=initialValue;
+        }
+        for(; i<0xc0; ++i) {
+            *p++=errorValue;
+        }
+
+        for(i=0; i<UTRIE2_DATA_GRANULARITY; ++i) {
+            *p++=initialValue;
+        }
+        break;
+    default:
+        *pErrorCode=U_ILLEGAL_ARGUMENT_ERROR;
+        return 0;
+    }
+
+    return trie;
+}
+
+extern "C" void
+utrie2_close_48(UTrie2 *trie) {
+    if(trie!=__null) {
+        if(trie->isMemoryOwned) {
+            uprv_free_48(trie->memory);
+        }
+        if(trie->newTrie!=__null) {
+            uprv_free_48(trie->newTrie->data);
+            uprv_free_48(trie->newTrie);
+        }
+        uprv_free_48(trie);
+    }
+}
+
+extern "C" int32_t
+utrie2_getVersion_48(const void *data, int32_t length, UBool anyEndianOk) {
+    uint32_t signature;
+    if(length<16 || data==__null || ((((ptrdiff_t)(char *)(data)) & (3))!=0)) {
+        return 0;
+    }
+    signature=*(const uint32_t *)data;
+    if(signature==0x54726932) {
+        return 2;
+    }
+    if(anyEndianOk && signature==0x32697254) {
+        return 2;
+    }
+    if(signature==0x54726965) {
+        return 1;
+    }
+    if(anyEndianOk && signature==0x65697254) {
+        return 1;
+    }
+    return 0;
+}
+
+extern "C" int32_t
+utrie2_swap_48(const UDataSwapper *ds,
+            const void *inData, int32_t length, void *outData,
+            UErrorCode *pErrorCode) {
+    const UTrie2Header *inTrie;
+    UTrie2Header trie;
+    int32_t dataLength, size;
+    UTrie2ValueBits valueBits;
+
+    if(U_FAILURE(*pErrorCode)) {
+        return 0;
+    }
+    if(ds==__null || inData==__null || (length>=0 && outData==__null)) {
+        *pErrorCode=U_ILLEGAL_ARGUMENT_ERROR;
+        return 0;
+    }
+
+
+    if(length>=0 && length<(int32_t)sizeof(UTrie2Header)) {
+        *pErrorCode=U_INDEX_OUTOFBOUNDS_ERROR;
+        return 0;
+    }
+
+    inTrie=(const UTrie2Header *)inData;
+    trie.signature=ds->readUInt32(inTrie->signature);
+    trie.options=ds->readUInt16(inTrie->options);
+    trie.indexLength=ds->readUInt16(inTrie->indexLength);
+    trie.shiftedDataLength=ds->readUInt16(inTrie->shiftedDataLength);
+
+    valueBits=(UTrie2ValueBits)(trie.options&UTRIE2_OPTIONS_VALUE_BITS_MASK);
+    dataLength=(int32_t)trie.shiftedDataLength<<UTRIE2_INDEX_SHIFT;
+
+    if( trie.signature!=0x54726932 ||
+        valueBits<0 || UTRIE2_COUNT_VALUE_BITS<=valueBits ||
+        trie.indexLength<UTRIE2_INDEX_1_OFFSET ||
+        dataLength<UTRIE2_DATA_START_OFFSET
+    ) {
+        *pErrorCode=U_INVALID_FORMAT_ERROR;
+        return 0;
+    }
+
+    size=sizeof(UTrie2Header)+trie.indexLength*2;
+    switch(valueBits) {
+    case UTRIE2_16_VALUE_BITS:
+        size+=dataLength*2;
+        break;
+    case UTRIE2_32_VALUE_BITS:
+        size+=dataLength*4;
+        break;
+    default:
+        *pErrorCode=U_INVALID_FORMAT_ERROR;
+        return 0;
+    }
+
+    if(length>=0) {
+        UTrie2Header *outTrie;
+
+        if(length<size) {
+            *pErrorCode=U_INDEX_OUTOFBOUNDS_ERROR;
+            return 0;
+        }
+
+        outTrie=(UTrie2Header *)outData;
+
+
+        ds->swapArray32(ds, &inTrie->signature, 4, &outTrie->signature, pErrorCode);
+        ds->swapArray16(ds, &inTrie->options, 12, &outTrie->options, pErrorCode);
+
+
+        switch(valueBits) {
+        case UTRIE2_16_VALUE_BITS:
+            ds->swapArray16(ds, inTrie+1, (trie.indexLength+dataLength)*2, outTrie+1, pErrorCode);
+            break;
+        case UTRIE2_32_VALUE_BITS:
+            ds->swapArray16(ds, inTrie+1, trie.indexLength*2, outTrie+1, pErrorCode);
+            ds->swapArray32(ds, (const uint16_t *)(inTrie+1)+trie.indexLength, dataLength*4,
+                                     (uint16_t *)(outTrie+1)+trie.indexLength, pErrorCode);
+            break;
+        default:
+            *pErrorCode=U_INVALID_FORMAT_ERROR;
+            return 0;
+        }
+    }
+
+    return size;
+}
+# 493 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp"
+static uint32_t
+enumSameValue(const void * , uint32_t value) {
+    return value;
+}
+# 511 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp"
+static void
+enumEitherTrie(const UTrie2 *trie,
+               UChar32 start, UChar32 limit,
+               UTrie2EnumValue *enumValue, UTrie2EnumRange *enumRange, const void *context) {
+    const uint32_t *data32;
+    const uint16_t *idx;
+
+    uint32_t value, prevValue, initialValue;
+    UChar32 c, prev, highStart;
+    int32_t j, i2Block, prevI2Block, index2NullOffset, block, prevBlock, nullBlock;
+
+    if(enumRange==__null) {
+        return;
+    }
+    if(enumValue==__null) {
+        enumValue=enumSameValue;
+    }
+
+    if(trie->newTrie==__null) {
+
+        idx=trie->index;
+        data32=trie->data32;
+
+        index2NullOffset=trie->index2NullOffset;
+        nullBlock=trie->dataNullOffset;
+    } else {
+
+        idx=__null;
+        data32=trie->newTrie->data;
+
+        index2NullOffset=trie->newTrie->index2NullOffset;
+        nullBlock=trie->newTrie->dataNullOffset;
+    }
+
+    highStart=trie->highStart;
+
+
+    initialValue=enumValue(context, trie->initialValue);
+
+
+    prevI2Block=-1;
+    prevBlock=-1;
+    prev=start;
+    prevValue=0;
+
+
+    for(c=start; c<limit && c<highStart;) {
+
+        UChar32 tempLimit=c+UTRIE2_CP_PER_INDEX_1_ENTRY;
+        if(limit<tempLimit) {
+            tempLimit=limit;
+        }
+        if(c<=0xffff) {
+            if(!(((c)&0xfffff800)==0xd800)) {
+                i2Block=c>>UTRIE2_SHIFT_2;
+            } else if((((c)&0x400)==0)) {
+
+
+
+
+                i2Block=UTRIE2_LSCP_INDEX_2_OFFSET;
+                tempLimit=((0xdc00)<(limit) ? (0xdc00) : (limit));
+            } else {
+
+
+
+
+                i2Block=0xd800>>UTRIE2_SHIFT_2;
+                tempLimit=((0xe000)<(limit) ? (0xe000) : (limit));
+            }
+        } else {
+
+            if(idx!=__null) {
+                i2Block=idx[(UTRIE2_INDEX_1_OFFSET-UTRIE2_OMITTED_BMP_INDEX_1_LENGTH)+
+                              (c>>UTRIE2_SHIFT_1)];
+            } else {
+                i2Block=trie->newTrie->index1[c>>UTRIE2_SHIFT_1];
+            }
+            if(i2Block==prevI2Block && (c-prev)>=UTRIE2_CP_PER_INDEX_1_ENTRY) {
+
+
+
+
+
+                c+=UTRIE2_CP_PER_INDEX_1_ENTRY;
+                continue;
+            }
+        }
+        prevI2Block=i2Block;
+        if(i2Block==index2NullOffset) {
+
+            if(prevValue!=initialValue) {
+                if(prev<c && !enumRange(context, prev, c-1, prevValue)) {
+                    return;
+                }
+                prevBlock=nullBlock;
+                prev=c;
+                prevValue=initialValue;
+            }
+            c+=UTRIE2_CP_PER_INDEX_1_ENTRY;
+        } else {
+
+            int32_t i2, i2Limit;
+            i2=(c>>UTRIE2_SHIFT_2)&UTRIE2_INDEX_2_MASK;
+            if((c>>UTRIE2_SHIFT_1)==(tempLimit>>UTRIE2_SHIFT_1)) {
+                i2Limit=(tempLimit>>UTRIE2_SHIFT_2)&UTRIE2_INDEX_2_MASK;
+            } else {
+                i2Limit=UTRIE2_INDEX_2_BLOCK_LENGTH;
+            }
+            for(; i2<i2Limit; ++i2) {
+                if(idx!=__null) {
+                    block=(int32_t)idx[i2Block+i2]<<UTRIE2_INDEX_SHIFT;
+                } else {
+                    block=trie->newTrie->index2[i2Block+i2];
+                }
+                if(block==prevBlock && (c-prev)>=UTRIE2_DATA_BLOCK_LENGTH) {
+
+                    c+=UTRIE2_DATA_BLOCK_LENGTH;
+                    continue;
+                }
+                prevBlock=block;
+                if(block==nullBlock) {
+
+                    if(prevValue!=initialValue) {
+                        if(prev<c && !enumRange(context, prev, c-1, prevValue)) {
+                            return;
+                        }
+                        prev=c;
+                        prevValue=initialValue;
+                    }
+                    c+=UTRIE2_DATA_BLOCK_LENGTH;
+                } else {
+                    for(j=0; j<UTRIE2_DATA_BLOCK_LENGTH; ++j) {
+                        value=enumValue(context, data32!=__null ? data32[block+j] : idx[block+j]);
+                        if(value!=prevValue) {
+                            if(prev<c && !enumRange(context, prev, c-1, prevValue)) {
+                                return;
+                            }
+                            prev=c;
+                            prevValue=value;
+                        }
+                        ++c;
+                    }
+                }
+            }
+        }
+    }
+
+    if(c>limit) {
+        c=limit;
+    } else if(c<limit) {
+
+        uint32_t highValue;
+        if(idx!=__null) {
+            highValue=
+                data32!=__null ?
+                    data32[trie->highValueIndex] :
+                    idx[trie->highValueIndex];
+        } else {
+            highValue=trie->newTrie->data[trie->newTrie->dataLength-UTRIE2_DATA_GRANULARITY];
+        }
+        value=enumValue(context, highValue);
+        if(value!=prevValue) {
+            if(prev<c && !enumRange(context, prev, c-1, prevValue)) {
+                return;
+            }
+            prev=c;
+            prevValue=value;
+        }
+        c=limit;
+    }
+
+
+    enumRange(context, prev, c-1, prevValue);
+}
+
+extern "C" void
+utrie2_enum_48(const UTrie2 *trie,
+            UTrie2EnumValue *enumValue, UTrie2EnumRange *enumRange, const void *context) {
+    enumEitherTrie(trie, 0, 0x110000, enumValue, enumRange, context);
+}
+
+extern "C" void
+utrie2_enumForLeadSurrogate_48(const UTrie2 *trie, UChar32 lead,
+                            UTrie2EnumValue *enumValue, UTrie2EnumRange *enumRange,
+                            const void *context) {
+    if(!(((lead)&0xfffffc00)==0xd800)) {
+        return;
+    }
+    lead=(lead-0xd7c0)<<10;
+    enumEitherTrie(trie, lead, lead+0x400, enumValue, enumRange, context);
+}
+
+
+
+extern "C++" { namespace icu_48 {
+
+uint16_t BackwardUTrie2StringIterator::previous16() {
+    codePointLimit=codePointStart;
+    if(start>=codePointStart) {
+        codePoint=(-1);
+        return 0;
+    }
+    uint16_t result;
+    { { uint16_t __c2; (codePoint)=*--(codePointStart); if(!(((codePoint)&0xfffffc00)==0xdc00) || (codePointStart)==(start) || !(((__c2=*((codePointStart)-1))&0xfffffc00)==0xd800)) { (result)=(trie)->index[(((int32_t)(((trie)->index)[((((codePoint)&0xfffffc00)==0xd800) ? UTRIE2_LSCP_INDEX_2_OFFSET-(0xd800>>UTRIE2_SHIFT_2) : 0)+((codePoint)>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ ((codePoint)&UTRIE2_DATA_MASK))]; } else { --(codePointStart); (codePoint)=(((UChar32)(__c2)<<10UL)+(UChar32)((codePoint))-((0xd800<<10UL)+0xdc00-0x10000)); (result)=((trie))->index[((codePoint))>=((trie))->highStart ? ((trie))->highValueIndex : (((int32_t)((((trie))->index)[ (((trie))->index)[(UTRIE2_INDEX_1_OFFSET-UTRIE2_OMITTED_BMP_INDEX_1_LENGTH)+ (((codePoint))>>UTRIE2_SHIFT_1)]+ ((((codePoint))>>UTRIE2_SHIFT_2)&UTRIE2_INDEX_2_MASK)]) <<UTRIE2_INDEX_SHIFT)+ (((codePoint))&UTRIE2_DATA_MASK))]; } } };
+    return result;
+}
+
+uint16_t ForwardUTrie2StringIterator::next16() {
+    codePointStart=codePointLimit;
+    if(codePointLimit==limit) {
+        codePoint=(-1);
+        return 0;
+    }
+    uint16_t result;
+    { { uint16_t __c2; (codePoint)=*(codePointLimit)++; if(!(((codePoint)&0xfffffc00)==0xd800)) { (result)=(trie)->index[(((int32_t)(((trie)->index)[(0)+((codePoint)>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ ((codePoint)&UTRIE2_DATA_MASK))]; } else if((codePointLimit)==(limit) || !(((__c2=*(codePointLimit))&0xfffffc00)==0xdc00)) { (result)=(trie)->index[(((int32_t)(((trie)->index)[(UTRIE2_LSCP_INDEX_2_OFFSET-(0xd800>>UTRIE2_SHIFT_2))+((codePoint)>>UTRIE2_SHIFT_2)]) <<UTRIE2_INDEX_SHIFT)+ ((codePoint)&UTRIE2_DATA_MASK))]; } else { ++(codePointLimit); (codePoint)=(((UChar32)((codePoint))<<10UL)+(UChar32)(__c2)-((0xd800<<10UL)+0xdc00-0x10000)); (result)=((trie))->index[((codePoint))>=((trie))->highStart ? ((trie))->highValueIndex : (((int32_t)((((trie))->index)[ (((trie))->index)[(UTRIE2_INDEX_1_OFFSET-UTRIE2_OMITTED_BMP_INDEX_1_LENGTH)+ (((codePoint))>>UTRIE2_SHIFT_1)]+ ((((codePoint))>>UTRIE2_SHIFT_2)&UTRIE2_INDEX_2_MASK)]) <<UTRIE2_INDEX_SHIFT)+ (((codePoint))&UTRIE2_DATA_MASK))]; } } };
+    return result;
+}
+
+UTrie2 *UTrie2Singleton::getInstance(InstantiatorFn *instantiator, const void *context,
+                                     UErrorCode &errorCode) {
+    void *duplicate;
+    UTrie2 *instance=(UTrie2 *)singleton.getInstance(instantiator, context, duplicate, errorCode);
+    utrie2_close_48((UTrie2 *)duplicate);
+    return instance;
+}
+
+} }

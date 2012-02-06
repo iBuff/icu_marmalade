@@ -1,0 +1,33 @@
+#!/usr/bin/env mkb
+
+option lib
+
+includepath source
+includepath ../common/source
+
+
+define U_STATIC_IMPLEMENTATION
+define NDEBUG
+
+library
+{
+	".,icudtb"
+}
+
+files
+{
+	
+	(source)
+	icudt_toc.c
+	icudtb.c
+	
+    
+	
+}
+
+options
+{
+    
+
+    verbose=1
+}

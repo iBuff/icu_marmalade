@@ -1,0 +1,21 @@
+#!/usr/bin/env mkb
+
+option lib
+
+subproject "i18n_build"
+
+define U_ATTRIBUTE_DEPRECATED=" "
+define _CRT_SECURE_NO_DEPRECATE
+define U_I18N_IMPLEMENTATION
+
+
+define U_STATIC_IMPLEMENTATION
+define NDEBUG
+
+
+options
+{
+    
+
+    verbose=1
+}

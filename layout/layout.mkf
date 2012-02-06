@@ -1,0 +1,24 @@
+includepath h
+
+library
+{
+	".,layout"
+}
+
+files
+{
+	(h/layout)
+	LayoutEngine.h
+	LEFontInstance.h
+	LEGlyphFilter.h
+	LEGlyphStorage.h
+	LEInsertionList.h
+	LELanguages.h
+	LEScripts.h
+	LESwaps.h
+	LETypes.h
+	loengine.h
+
+
+	
+}

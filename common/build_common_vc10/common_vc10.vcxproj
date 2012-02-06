@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="X86 Debug|Win32">
+      <Configuration>X86 Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="X86 Release|Win32">
+      <Configuration>X86 Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RVCT ARM Debug|Win32">
+      <Configuration>RVCT ARM Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RVCT ARM Release|Win32">
+      <Configuration>RVCT ARM Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC ARM Debug|Win32">
+      <Configuration>GCC ARM Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC ARM Release|Win32">
+      <Configuration>GCC ARM Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC MIPS Debug|Win32">
+      <Configuration>GCC MIPS Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GCC MIPS Release|Win32">
+      <Configuration>GCC MIPS Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    </ItemGroup>
+
+    <PropertyGroup Label="Globals">
+      <ProjectGuid>{52F04D33-EED5-4EA7-8123-B57083AB4532}</ProjectGuid>
+      <Keyword>Win32Proj</Keyword>
+      <RootNamespace>RealProj</RootNamespace>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='X86 Debug|Win32'" Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='X86 Release|Win32'" Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'" Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'" Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'" Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'" Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'" Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'" Label="Configuration">
+      <ConfigurationType>StaticLibrary</ConfigurationType>
+      <UseDebugLibraries>true</UseDebugLibraries>
+      <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='X86 Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='X86 Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    </ImportGroup>
+    <PropertyGroup Label="UserMacros" />
+        <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='X86 Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_common_vc10_x86\</IntDir>
+      <OutDir>C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\lib\x86\</OutDir>
+      <TargetName>common_d</TargetName>
+      <TargetExt>.lib</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='X86 Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_common_vc10_x86\</IntDir>
+      <OutDir>C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\lib\x86\</OutDir>
+      <TargetName>common</TargetName>
+      <TargetExt>.lib</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_common_vc10_arm\</IntDir>
+      <OutDir>C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\lib\arm\</OutDir>
+      <TargetName>common_d</TargetName>
+      <TargetExt>.a</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_common_vc10_arm\</IntDir>
+      <OutDir>C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\lib\arm\</OutDir>
+      <TargetName>common</TargetName>
+      <TargetExt>.a</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_common_vc10_gcc_arm\</IntDir>
+      <OutDir>C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\lib\arm\</OutDir>
+      <TargetName>libcommon_d</TargetName>
+      <TargetExt>.a</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_common_vc10_gcc_arm\</IntDir>
+      <OutDir>C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\lib\arm\</OutDir>
+      <TargetName>libcommon</TargetName>
+      <TargetExt>.a</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">
+      <LinkIncremental>true</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Debug_common_vc10_gcc_mips\</IntDir>
+      <OutDir>C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\lib\mips\linux\</OutDir>
+      <TargetName>libcommon_d</TargetName>
+      <TargetExt>.a</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">
+      <LinkIncremental>false</LinkIncremental>
+      <ExecutablePath>$(S3E_DIR)\bin;$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(FrameworkSDKDir)\bin;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+      <IntDir>Release_common_vc10_gcc_mips\</IntDir>
+      <OutDir>C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\lib\mips\linux\</OutDir>
+      <TargetName>libcommon</TargetName>
+      <TargetExt>.a</TargetExt>
+      <GenerateManifest>false</GenerateManifest>
+    </PropertyGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='X86 Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /FI"C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\build_common_vc10\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/users/will/documents/utterspeech/marmalade/icu/common/source;c:/users/will/documents/utterspeech/marmalade/icu/i18n/source;c:/marmalade/5.2/s3e/h;c:/marmalade/5.2/s3e/h/ext;c:/marmalade/5.2/s3e/h/std;c:/marmalade/5.2/s3e/h/std/c++;c:/marmalade/5.2/s3e/h/ext_legacy;c:/marmalade/5.2/s3e/h/legacy;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories></AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol>DllEntryPoint</EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='X86 Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /FI"C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\build_common_vc10\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/users/will/documents/utterspeech/marmalade/icu/common/source;c:/users/will/documents/utterspeech/marmalade/icu/i18n/source;c:/marmalade/5.2/s3e/h;c:/marmalade/5.2/s3e/h/ext;c:/marmalade/5.2/s3e/h/std;c:/marmalade/5.2/s3e/h/std/c++;c:/marmalade/5.2/s3e/h/ext_legacy;c:/marmalade/5.2/s3e/h/legacy;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories></AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol>DllEntryPoint</EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions> %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='__invalid__rvct' tooltype=rvct_compiler --enum_is_int --unsigned_chars --interleave --diag_remark=1,9,111,174,128,177,196,381,550,611,815,1293,1295,1299,1300,1304,3017,3052,390 --apcs=/noropi --library_interface=aeabi_glibc --no-hide-all --no_unaligned_access --no_exceptions --fpu=softvfp --apcs=/interwork --cpu=4T --no-rvct -Jc:/MARMAL~1/5.2/s3e/h/std --asm --cppflag=--cpp -g -O0 --no_inline --diag_style=ide --default_extension=obj " /S3Everbose  /FD  /FI"C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\build_common_vc10\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/users/will/documents/utterspeech/marmalade/icu/common/source;c:/users/will/documents/utterspeech/marmalade/icu/i18n/source;c:/marmalade/5.2/s3e/h;c:/marmalade/5.2/s3e/h/ext;c:/marmalade/5.2/s3e/h/std;c:/marmalade/5.2/s3e/h/std/c++;c:/marmalade/5.2/s3e/h/ext_legacy;c:/marmalade/5.2/s3e/h/legacy;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories></AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions>"s3e-custom-tool='__invalid__rvct' tooltype=rvct_lib --create " /S3Everbose  %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='__invalid__rvct' tooltype=rvct_compiler --enum_is_int --unsigned_chars --interleave --diag_remark=1,9,111,174,128,177,196,381,550,611,815,1293,1295,1299,1300,1304,3017,3052,390 --apcs=/noropi --library_interface=aeabi_glibc --no-hide-all --no_unaligned_access --no_exceptions --fpu=softvfp --apcs=/interwork --cpu=4T --no-rvct -Jc:/MARMAL~1/5.2/s3e/h/std --asm --cppflag=--cpp --split_sections -Otime -O3 --diag_style=ide --default_extension=obj " /S3Everbose  /FD  /FI"C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\build_common_vc10\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/users/will/documents/utterspeech/marmalade/icu/common/source;c:/users/will/documents/utterspeech/marmalade/icu/i18n/source;c:/marmalade/5.2/s3e/h;c:/marmalade/5.2/s3e/h/ext;c:/marmalade/5.2/s3e/h/std;c:/marmalade/5.2/s3e/h/std/c++;c:/marmalade/5.2/s3e/h/ext_legacy;c:/marmalade/5.2/s3e/h/legacy;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories></AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions>"s3e-custom-tool='__invalid__rvct' tooltype=rvct_lib --create " /S3Everbose  %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/5.2/s3e/gcc/bin/arm-none-eabi-gcc.exe' tooltype=gcc_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fomit-frame-pointer -fmessage-length=0 -Wno-unused -Wno-parentheses -save-temps -ffunction-sections -mstructure-size-boundary=8 -msoft-float -mthumb-interwork -march=armv4t -Wno-switch -Wno-psabi -fvisibility=hidden -nostdinc --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-nostdinc++ -g -O0" /S3Everbose  /FD  /FI"C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\build_common_vc10\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/users/will/documents/utterspeech/marmalade/icu/common/source;c:/users/will/documents/utterspeech/marmalade/icu/i18n/source;c:/marmalade/5.2/s3e/h;c:/marmalade/5.2/s3e/h/ext;c:/marmalade/5.2/s3e/h/std;c:/marmalade/5.2/s3e/h/std/c++;c:/marmalade/5.2/s3e/h/ext_legacy;c:/marmalade/5.2/s3e/h/legacy;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories></AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions>"s3e-custom-tool='c:/marmalade/5.2/s3e/gcc/bin/arm-none-eabi-ar.exe' tooltype=gcc_lib rc " /S3Everbose  %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/5.2/s3e/gcc/bin/arm-none-eabi-gcc.exe' tooltype=gcc_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fomit-frame-pointer -fmessage-length=0 -Wno-unused -Wno-parentheses -save-temps -ffunction-sections -mstructure-size-boundary=8 -msoft-float -mthumb-interwork -march=armv4t -Wno-switch -Wno-psabi -fvisibility=hidden -nostdinc --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-nostdinc++ -fomit-frame-pointer -O3" /S3Everbose  /FD  /FI"C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\build_common_vc10\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/users/will/documents/utterspeech/marmalade/icu/common/source;c:/users/will/documents/utterspeech/marmalade/icu/i18n/source;c:/marmalade/5.2/s3e/h;c:/marmalade/5.2/s3e/h/ext;c:/marmalade/5.2/s3e/h/std;c:/marmalade/5.2/s3e/h/std/c++;c:/marmalade/5.2/s3e/h/ext_legacy;c:/marmalade/5.2/s3e/h/legacy;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories></AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions>"s3e-custom-tool='c:/marmalade/5.2/s3e/gcc/bin/arm-none-eabi-ar.exe' tooltype=gcc_lib rc " /S3Everbose  %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/5.2/tools/gcc/mips/bin/mips-linux-gnu-gcc.exe' tooltype=gcc_mips_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fmessage-length=0 -Wno-unused -Wno-parentheses -save-temps -EL -mips1 -mabi=32 -Wno-switch -fvisibility=hidden -nostdinc -fPIC --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-nostdinc++ -g -O0" /S3Everbose  /FD  /FI"C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\build_common_vc10\temp_defines_debug.h"</AdditionalOptions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/users/will/documents/utterspeech/marmalade/icu/common/source;c:/users/will/documents/utterspeech/marmalade/icu/i18n/source;c:/marmalade/5.2/s3e/h;c:/marmalade/5.2/s3e/h/ext;c:/marmalade/5.2/s3e/h/std;c:/marmalade/5.2/s3e/h/std/c++;c:/marmalade/5.2/s3e/h/ext_legacy;c:/marmalade/5.2/s3e/h/legacy;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories></AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions>"s3e-custom-tool='c:/marmalade/5.2/tools/gcc/mips/bin/mips-linux-gnu-ar.exe' tooltype=gcc_mips_lib rc " /S3Everbose  %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PreprocessorDefinitions></PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalOptions>/S3Eproject /J /Fe"s3e-custom-tool='c:/marmalade/5.2/tools/gcc/mips/bin/mips-linux-gnu-gcc.exe' tooltype=gcc_mips_compiler -funsigned-char -fno-strict-aliasing -fno-stack-protector -fno-short-enums -fshort-wchar -Wall -fmessage-length=0 -Wno-unused -Wno-parentheses -save-temps -EL -mips1 -mabi=32 -Wno-switch -fvisibility=hidden -nostdinc -fPIC --cppflag=-Wno-reorder --cppflag=-fvisibility-inlines-hidden --cppflag=-fno-exceptions --cppflag=-nostdinc++ -fomit-frame-pointer -O3" /S3Everbose  /FD  /FI"C:\Users\will\Documents\UtterSpeech\marmalade\icu\common\build_common_vc10\temp_defines_release.h"</AdditionalOptions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <AdditionalIncludeDirectories>c:/users/will/documents/utterspeech/marmalade/icu/common/source;c:/users/will/documents/utterspeech/marmalade/icu/i18n/source;c:/marmalade/5.2/s3e/h;c:/marmalade/5.2/s3e/h/ext;c:/marmalade/5.2/s3e/h/std;c:/marmalade/5.2/s3e/h/std/c++;c:/marmalade/5.2/s3e/h/ext_legacy;c:/marmalade/5.2/s3e/h/legacy;.</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalOptions> /include:_IwMain /include:_raise /include:_DllEntryPoint@12</AdditionalOptions>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AdditionalLibraryDirectories></AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <EntryPointSymbol></EntryPointSymbol>
+      <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalOptions>"s3e-custom-tool='c:/marmalade/5.2/tools/gcc/mips/bin/mips-linux-gnu-ar.exe' tooltype=gcc_mips_lib rc " /S3Everbose  %(AdditionalOptions) </AdditionalOptions>
+    </Lib>
+    </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/iterator" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/pthread_alloc" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/stdio_streambuf" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cassert" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/istream" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/string" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/iomanip" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/vector" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/climits" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/new" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/queue" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/fstream" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/memory" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/deque" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cwchar" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/csignal" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/hash_map" />
+    <None Include="c:/marmalade/5.2/s3e/s3e.mkf" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/map" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/typeinfo" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/valarray" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/iosfwd" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/slist" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/list" />
+    <None Include="c:/marmalade/5.2/s3e/s3e.config.txt" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/numeric" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/iostream" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cstring" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/locale" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cstdlib" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cstddef" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/ostream" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cwctype" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/set" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cstdio" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/bitset" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/limits" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/streambuf" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cstdarg" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/strstream" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/exception" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/rope" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cctype" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/complex" />
+    <None Include="c:/marmalade/5.2/s3e/s3e.icf" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/ios" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/stack" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cfloat" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/ctime" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/sstream" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/functional" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/utility" />
+    <None Include="c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/hash_set" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cmath" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/cerrno" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/clocale" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/csetjmp" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/algorithm" />
+    <None Include="c:/marmalade/5.2/s3e/h/std/c++/stdexcept" />
+    <CustomBuild Include="..\common.mkb">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='X86 Debug|Win32'">"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='X86 Debug|Win32'">common_vc10.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='X86 Debug|Win32'">c:/marmalade/5.2/s3e/s3e.mkf;c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='X86 Release|Win32'">"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='X86 Release|Win32'">common_vc10.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='X86 Release|Win32'">c:/marmalade/5.2/s3e/s3e.mkf;c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">common_vc10.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Debug|Win32'">c:/marmalade/5.2/s3e/s3e.mkf;c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">common_vc10.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RVCT ARM Release|Win32'">c:/marmalade/5.2/s3e/s3e.mkf;c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">common_vc10.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC ARM Debug|Win32'">c:/marmalade/5.2/s3e/s3e.mkf;c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">common_vc10.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC ARM Release|Win32'">c:/marmalade/5.2/s3e/s3e.mkf;c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">common_vc10.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Debug|Win32'">c:/marmalade/5.2/s3e/s3e.mkf;c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">common_vc10.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='GCC MIPS Release|Win32'">c:/marmalade/5.2/s3e/s3e.mkf;c:/users/will/documents/utterspeech/marmalade/icu/common/common_build.mkf</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3e.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/errno.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sched.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/grp.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/iostream.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/assert.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/dir.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/locale.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/streambuf.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eCompass.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eVibra.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/fnmatch.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eAudio.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eSurface.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eWindow.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eOSExec.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/wctype.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/GLES2/gl2platform.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eDevice.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/malloc.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/stdarg.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/endian.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eCamera.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/EGL/egl.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/GLES/egl.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/pthread_types.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/getopt.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/times.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/unistd.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eCompression.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/langinfo.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3edebugHeap.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/AirplayVersion.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/GLES2/gl2extimg.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/syslog.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eOSReadString.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/msl_string.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/select.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/libgen.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/signal.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sigcontext.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eClipboard.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eDebug.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/socket.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/GLES/glext.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/netdb.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/typeinfo.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3ePointer.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/fstream.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eGL.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/GLES2/gl2.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/stdiostream.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/mem.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/utime.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eImagePicker.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/stdlib.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/stddef.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/setjmp_win32.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/wchar.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eCameraCapture.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/EGL/eglext.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/strstream.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/file.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eSMS.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/limits.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eSocket.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/ipc.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/poll.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eThread.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/ucontext.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/time.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eSoundRecord.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eVersion.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eTypes.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/signal.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/termios.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eLocation.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/pwd.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eHash.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/type_traits.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eLibrary.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/dlfcn.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/math_rvct.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/mman.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/utsname.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/wait.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/param.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/inttypes.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/dirent.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/GLES/glplatform.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/alloca.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eContacts.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eLicense.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eTimer.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/GLES2/gl2ext.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eSound.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eIOSBackgroundAudio.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/exception.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/poll.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/types.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/ifaddrs.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/rlocks.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/ioctl.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/iconv.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/sendfile.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eConfig.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/stat.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/byteswap.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/pthread.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/time.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/sem.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/stdio.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/new.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eEMail.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eVideo.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eAccelerometer.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/setjmp.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/istream.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/stdint.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/semaphore.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/prctl.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/strings.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eExt.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eMetrics.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/glob.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eSecureStorage.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/string.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/float.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/iomanip.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/ctype.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/signal.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/shm.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/un.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eCrypto.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eKeyboard.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/fcntl.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/memory.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/pthread.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/ostream.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/stl_user_config.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/GLES/gl.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/MarmaladeVersion.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/c++/ios.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/EGL/eglplatform.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/math_gcc.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eMemory.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/s3eFile.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/resource.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/ext/s3eAndroidJNI.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/math.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/stdbool.h" />
+    <ClInclude Include="c:/marmalade/5.2/s3e/h/std/sys/uio.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uniset_props.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/udatamem.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uniset.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/punycode.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uobject.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnvsel.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ubidiwrt.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucol_swp.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/rbbinode.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uloc_tag.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_u32.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uinvchar.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/loclikely.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_u16.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_ct.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_u7.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/icuplug.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unames.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/brkeng.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2_builder.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_ext.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ustrfmt.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/propsvec.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uresbund.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/rbbirb.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/utypes.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/patternprops.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvector.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/usc_impl.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ubidi.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_cb.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/triedict.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/errorcode.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ustrcase.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/cwchar.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrace.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucharstrie.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uiter.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/resbund.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/appendable.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unistr_props.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/umapfile.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnvdisp.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucat.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/normlzr.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/bytestream.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/utf_impl.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/locavailable.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/servslkf.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/locmap.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uprops.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uset_props.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_set.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/bytestriebuilder.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unistr.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unorm_it.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/brkiter.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uchar.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uenum.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/usprep.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/parsepos.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ubrk.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/charstr.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uts46.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash_us.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/util_props.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ustr_wcs.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie2.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/rbbisetb.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucmndata.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucase.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ustack.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ushape.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/putil.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/bmpset.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/bytestrie.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_lmb.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/serv.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/bytestrieiterator.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/cstring.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/util.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/locbased.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unifunct.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ures_cnv.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/stringtriebuilder.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ruleiter.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ubidiln.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unistr_case.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucharstriebuilder.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/servlk.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/udataswp.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/locutil.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/rbbitblb.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uset.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_u8.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/servlkf.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ustr_cnv.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnvlat1.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/icudataver.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/locresdata.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/rbbi.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/rbbidata.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ustrenum.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unifilt.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/dtintrv.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unorm.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/umutex.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucharstrieiterator.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/messagepattern.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uinit.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/locdispnames.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uarrsort.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/udata.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucln_cmn.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/umath.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/stringpiece.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uscript.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_io.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_cnv.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/rbbistbl.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uidna.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ubidi_props.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unistr_cnv.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/servls.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/caniter.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/resbund_cnv.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unormcmp.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/wintz.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnvscsu.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv2022.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/mutex.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uloc.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnvmbcs.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/servnotf.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/utrie.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/normalizer2.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/propname.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/chariter.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/unisetspan.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ustring.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/servrbf.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ulist.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucasemap.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnvhz.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnvisci.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/normalizer2impl.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_bld.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uresdata.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/usetiter.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr32.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnvbocu.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ucnv_err.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/filterednormalizer2.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/ustrtrns.c" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/dictbe.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/schriter.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/rbbiscan.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/uchriter.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/utext.cpp" />
+    <ClCompile Include="c:/users/will/documents/utterspeech/marmalade/icu/common/source/locid.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

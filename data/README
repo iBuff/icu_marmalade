@@ -1,0 +1,22 @@
+[ICU data file]
+
+The .dat file can be obtained from http://apps.icu-project.org/datacustom/
+
+Or just use the one I have already.
+
+[Source generation]
+
+We must generate the source code before we can build the library!
+
+* run the appropriate batch file under `gen_source`
+
+
+
+[Little vs Big endian]
+
+Due to the way ICU memory maps its data, we need to be aware of the endianess of our target platforms.
+
+This is probably just being a bit over the top as we will pretty much always be on little endian systems.
+
+So I have separated them out into two libraries.
+

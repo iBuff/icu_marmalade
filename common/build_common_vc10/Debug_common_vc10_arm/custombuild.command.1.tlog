@@ -1,0 +1,2 @@
+^C:\USERS\WILL\DOCUMENTS\UTTERSPEECH\MARMALADE\ICU\COMMON\COMMON.MKB
+"C:\Marmalade\5.2\s3e\python\python.exe" "C:\Marmalade\5.2\s3e\makefile_builder\mkb.py" "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/common.mkb" "--default-buildenv=vc10" --msvc-project

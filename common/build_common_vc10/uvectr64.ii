@@ -1,0 +1,2123 @@
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.cpp"
+# 1 "C:\\Users\\will\\Documents\\UtterSpeech\\marmalade\\icu\\common\\build_common_vc10//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "C:/Users/will/Documents/UtterSpeech/marmalade/icu/common/build_common_vc10/temp_defines_debug.h" 1
+# 1 "<command-line>" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.cpp"
+
+
+
+
+
+
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h" 1
+# 17 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 1
+# 36 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h" 1
+# 61 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h" 1
+# 23 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h"
+# 1 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 1
+# 15 "c:/marmalade/5.2/s3e/h/std/sys/types.h"
+# 1 "c:/marmalade/5.2/s3e/h/s3eTypes.h" 1
+# 37 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef unsigned char s3e_uint8_t;
+typedef signed char s3e_int8_t;
+typedef unsigned short int s3e_uint16_t;
+typedef signed short int s3e_int16_t;
+typedef unsigned int s3e_uint32_t;
+typedef signed int s3e_int32_t;
+# 51 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+  typedef signed long long s3e_int64_t;
+  typedef unsigned long long s3e_uint64_t;
+# 74 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef s3e_uint64_t uint64_t;
+typedef s3e_int64_t int64_t;
+typedef s3e_uint32_t uint32_t;
+typedef s3e_int32_t int32_t;
+typedef s3e_uint16_t uint16_t;
+typedef s3e_int16_t int16_t;
+typedef s3e_uint8_t uint8_t;
+typedef s3e_int8_t int8_t;
+# 96 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+    typedef int intptr_t;
+    typedef unsigned int uintptr_t;
+# 108 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef unsigned int uint;
+typedef unsigned short int ushort;
+typedef unsigned long int ulong;
+typedef unsigned char uint8;
+typedef signed char int8;
+
+
+
+
+
+
+
+typedef int64_t int64;
+typedef uint64_t uint64;
+
+
+
+
+
+typedef unsigned int uint32;
+
+
+
+
+
+
+typedef signed int int32;
+
+
+
+
+
+
+typedef uint16_t uint16;
+
+
+
+
+typedef int16_t int16;
+# 226 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef enum s3eResult
+{
+    S3E_RESULT_SUCCESS = 0,
+    S3E_RESULT_ERROR = 1
+} s3eResult;
+
+
+
+
+typedef uint8 s3eBool;
+# 244 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef wchar_t s3eWChar;
+# 256 "c:/marmalade/5.2/s3e/h/s3eTypes.h"
+typedef int32 (*s3eCallback) (void* systemData, void* userData);
+# 16 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 2
+# 1 "c:/marmalade/5.2/s3e/h/std/stddef.h" 1
+# 16 "c:/marmalade/5.2/s3e/h/std/stddef.h"
+typedef signed int ptrdiff_t;
+
+
+    typedef unsigned int wint_t;
+    typedef unsigned long int wctype_t;
+
+
+
+
+
+
+
+typedef unsigned int size_t;
+# 17 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 2
+# 1 "c:/marmalade/5.2/s3e/h/std/stdint.h" 1
+# 19 "c:/marmalade/5.2/s3e/h/std/stdint.h"
+typedef signed char int_least8_t;
+typedef short int_least16_t;
+typedef long int_least32_t;
+typedef int64_t int_least64_t;
+
+typedef unsigned char uint_least8_t;
+typedef unsigned short uint_least16_t;
+typedef unsigned long uint_least32_t;
+typedef uint64_t uint_least64_t;
+
+typedef signed char int_fast8_t;
+typedef short int_fast16_t;
+typedef long int_fast32_t;
+typedef int64_t int_fast64_t;
+
+typedef unsigned char uint_fast8_t;
+typedef unsigned short uint_fast16_t;
+typedef unsigned long uint_fast32_t;
+typedef uint64_t uint_fast64_t;
+
+typedef int64_t intmax_t;
+typedef uint64_t uintmax_t;
+# 18 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 2
+# 1 "c:/marmalade/5.2/s3e/h/std/sys/select.h" 1
+# 24 "c:/marmalade/5.2/s3e/h/std/sys/select.h"
+struct timeval;
+
+typedef struct fd_set
+{
+    char fds_bits[256/8];
+} fd_set;
+# 39 "c:/marmalade/5.2/s3e/h/std/sys/select.h"
+extern "C" {
+
+int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
+
+}
+# 19 "c:/marmalade/5.2/s3e/h/std/sys/types.h" 2
+
+
+
+typedef long off_t;
+
+typedef int64_t off64_t;
+
+
+namespace std
+{
+    typedef ::size_t size_t;
+}
+
+
+typedef uint u_int;
+typedef uint8_t u_int8_t;
+typedef uint16_t u_int16_t;
+typedef uint32_t u_int32_t;
+typedef uint64_t u_int64_t;
+
+typedef unsigned short u_short;
+typedef unsigned long u_long;
+typedef unsigned char u_char;
+
+typedef int ssize_t;
+typedef int pid_t;
+typedef short uid_t;
+typedef short gid_t;
+typedef int idtype_t;
+typedef int id_t;
+typedef uint32 mode_t;
+typedef short dev_t;
+typedef short ino_t;
+typedef int key_t;
+typedef void* caddr_t;
+# 24 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h" 2
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/platform.h" 1
+# 26 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h" 2
+# 51 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h"
+# 1 "c:/marmalade/5.2/s3e/h/std/inttypes.h" 1
+# 17 "c:/marmalade/5.2/s3e/h/std/inttypes.h"
+typedef struct
+{
+    long int quot;
+    long int rem;
+} imaxdiv_t;
+
+
+extern "C" {
+
+imaxdiv_t imaxdiv(intmax_t numerator, intmax_t denominator);
+
+}
+# 52 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/ptypes.h" 2
+# 62 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h" 2
+# 231 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+typedef int8_t UBool;
+# 322 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+    typedef wchar_t UChar;
+# 349 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+typedef int32_t UChar32;
+# 386 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/urename.h" 1
+# 35 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/urename.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h" 1
+# 36 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/urename.h" 2
+
+
+
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uvernum.h" 1
+# 41 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/urename.h" 2
+# 387 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/umachine.h" 2
+# 37 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 1
+# 111 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 1
+# 112 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 2
+# 230 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h" 1
+# 58 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" const uint8_t
+
+
+
+utf8_countTrailBytes_48[256];
+# 91 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" UChar32
+utf8_nextCharSafeBody_48(const uint8_t *s, int32_t *pi, int32_t length, UChar32 c, UBool strict);
+# 103 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" int32_t
+utf8_appendCharSafeBody_48(uint8_t *s, int32_t i, int32_t length, UChar32 c, UBool *pIsError);
+# 115 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" UChar32
+utf8_prevCharSafeBody_48(const uint8_t *s, int32_t start, int32_t *pi, UChar32 c, UBool strict);
+# 127 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf8.h"
+extern "C" int32_t
+utf8_back1SafeBody_48(const uint8_t *s, int32_t start, int32_t i);
+# 231 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf16.h" 1
+# 232 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 2
+
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf_old.h" 1
+# 235 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utf.h" 2
+# 38 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h" 1
+# 57 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+typedef uint8_t UVersionInfo[4];
+# 109 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+        namespace icu_48 { }
+        namespace icu = icu_48;
+# 122 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+        using namespace icu_48;
+# 152 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+extern "C" void
+u_versionFromString_48(UVersionInfo versionArray, const char *versionString);
+# 166 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+extern "C" void
+u_versionFromUString_48(UVersionInfo versionArray, const UChar *versionString);
+# 182 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+extern "C" void
+u_versionToString_48(UVersionInfo versionArray, char *versionString);
+# 193 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uversion.h"
+extern "C" void
+u_getVersion_48(UVersionInfo versionArray);
+# 39 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uconfig.h" 1
+# 40 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 1 "c:/marmalade/5.2/s3e/h/std/float.h" 1
+# 31 "c:/marmalade/5.2/s3e/h/std/float.h"
+  extern "C" {
+# 109 "c:/marmalade/5.2/s3e/h/std/float.h"
+extern "C" {
+
+unsigned _controlfp(unsigned, unsigned);
+unsigned _clearfp(void);
+unsigned _statusfp(void);
+
+}
+# 150 "c:/marmalade/5.2/s3e/h/std/float.h"
+    }
+# 41 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h" 2
+# 314 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+typedef double UDate;
+# 385 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+typedef void* UClassID;
+# 639 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+typedef enum UErrorCode {
+
+
+
+
+
+    U_USING_FALLBACK_WARNING = -128,
+
+    U_ERROR_WARNING_START = -128,
+
+    U_USING_DEFAULT_WARNING = -127,
+
+    U_SAFECLONE_ALLOCATED_WARNING = -126,
+
+    U_STATE_OLD_WARNING = -125,
+
+    U_STRING_NOT_TERMINATED_WARNING = -124,
+
+    U_SORT_KEY_TOO_SHORT_WARNING = -123,
+
+    U_AMBIGUOUS_ALIAS_WARNING = -122,
+
+    U_DIFFERENT_UCA_VERSION = -121,
+
+    U_PLUGIN_CHANGED_LEVEL_WARNING = -120,
+
+    U_ERROR_WARNING_LIMIT,
+
+
+    U_ZERO_ERROR = 0,
+
+    U_ILLEGAL_ARGUMENT_ERROR = 1,
+    U_MISSING_RESOURCE_ERROR = 2,
+    U_INVALID_FORMAT_ERROR = 3,
+    U_FILE_ACCESS_ERROR = 4,
+    U_INTERNAL_PROGRAM_ERROR = 5,
+    U_MESSAGE_PARSE_ERROR = 6,
+    U_MEMORY_ALLOCATION_ERROR = 7,
+    U_INDEX_OUTOFBOUNDS_ERROR = 8,
+    U_PARSE_ERROR = 9,
+    U_INVALID_CHAR_FOUND = 10,
+    U_TRUNCATED_CHAR_FOUND = 11,
+    U_ILLEGAL_CHAR_FOUND = 12,
+    U_INVALID_TABLE_FORMAT = 13,
+    U_INVALID_TABLE_FILE = 14,
+    U_BUFFER_OVERFLOW_ERROR = 15,
+    U_UNSUPPORTED_ERROR = 16,
+    U_RESOURCE_TYPE_MISMATCH = 17,
+    U_ILLEGAL_ESCAPE_SEQUENCE = 18,
+    U_UNSUPPORTED_ESCAPE_SEQUENCE = 19,
+    U_NO_SPACE_AVAILABLE = 20,
+    U_CE_NOT_FOUND_ERROR = 21,
+    U_PRIMARY_TOO_LONG_ERROR = 22,
+    U_STATE_TOO_OLD_ERROR = 23,
+    U_TOO_MANY_ALIASES_ERROR = 24,
+
+    U_ENUM_OUT_OF_SYNC_ERROR = 25,
+    U_INVARIANT_CONVERSION_ERROR = 26,
+    U_INVALID_STATE_ERROR = 27,
+    U_COLLATOR_VERSION_MISMATCH = 28,
+    U_USELESS_COLLATOR_ERROR = 29,
+    U_NO_WRITE_PERMISSION = 30,
+
+    U_STANDARD_ERROR_LIMIT,
+
+
+
+    U_BAD_VARIABLE_DEFINITION=0x10000,
+    U_PARSE_ERROR_START = 0x10000,
+    U_MALFORMED_RULE,
+    U_MALFORMED_SET,
+    U_MALFORMED_SYMBOL_REFERENCE,
+    U_MALFORMED_UNICODE_ESCAPE,
+    U_MALFORMED_VARIABLE_DEFINITION,
+    U_MALFORMED_VARIABLE_REFERENCE,
+    U_MISMATCHED_SEGMENT_DELIMITERS,
+    U_MISPLACED_ANCHOR_START,
+    U_MISPLACED_CURSOR_OFFSET,
+    U_MISPLACED_QUANTIFIER,
+    U_MISSING_OPERATOR,
+    U_MISSING_SEGMENT_CLOSE,
+    U_MULTIPLE_ANTE_CONTEXTS,
+    U_MULTIPLE_CURSORS,
+    U_MULTIPLE_POST_CONTEXTS,
+    U_TRAILING_BACKSLASH,
+    U_UNDEFINED_SEGMENT_REFERENCE,
+    U_UNDEFINED_VARIABLE,
+    U_UNQUOTED_SPECIAL,
+    U_UNTERMINATED_QUOTE,
+    U_RULE_MASK_ERROR,
+    U_MISPLACED_COMPOUND_FILTER,
+    U_MULTIPLE_COMPOUND_FILTERS,
+    U_INVALID_RBT_SYNTAX,
+    U_INVALID_PROPERTY_PATTERN,
+    U_MALFORMED_PRAGMA,
+    U_UNCLOSED_SEGMENT,
+    U_ILLEGAL_CHAR_IN_SEGMENT,
+    U_VARIABLE_RANGE_EXHAUSTED,
+    U_VARIABLE_RANGE_OVERLAP,
+    U_ILLEGAL_CHARACTER,
+    U_INTERNAL_TRANSLITERATOR_ERROR,
+    U_INVALID_ID,
+    U_INVALID_FUNCTION,
+    U_PARSE_ERROR_LIMIT,
+
+
+
+
+    U_UNEXPECTED_TOKEN=0x10100,
+    U_FMT_PARSE_ERROR_START=0x10100,
+    U_MULTIPLE_DECIMAL_SEPARATORS,
+    U_MULTIPLE_DECIMAL_SEPERATORS = U_MULTIPLE_DECIMAL_SEPARATORS,
+    U_MULTIPLE_EXPONENTIAL_SYMBOLS,
+    U_MALFORMED_EXPONENTIAL_PATTERN,
+    U_MULTIPLE_PERCENT_SYMBOLS,
+    U_MULTIPLE_PERMILL_SYMBOLS,
+    U_MULTIPLE_PAD_SPECIFIERS,
+    U_PATTERN_SYNTAX_ERROR,
+    U_ILLEGAL_PAD_POSITION,
+    U_UNMATCHED_BRACES,
+    U_UNSUPPORTED_PROPERTY,
+    U_UNSUPPORTED_ATTRIBUTE,
+    U_ARGUMENT_TYPE_MISMATCH,
+    U_DUPLICATE_KEYWORD,
+    U_UNDEFINED_KEYWORD,
+    U_DEFAULT_KEYWORD_MISSING,
+    U_DECIMAL_NUMBER_SYNTAX_ERROR,
+    U_FORMAT_INEXACT_ERROR,
+    U_FMT_PARSE_ERROR_LIMIT,
+
+
+
+
+    U_BRK_INTERNAL_ERROR=0x10200,
+    U_BRK_ERROR_START=0x10200,
+    U_BRK_HEX_DIGITS_EXPECTED,
+    U_BRK_SEMICOLON_EXPECTED,
+    U_BRK_RULE_SYNTAX,
+    U_BRK_UNCLOSED_SET,
+    U_BRK_ASSIGN_ERROR,
+    U_BRK_VARIABLE_REDFINITION,
+    U_BRK_MISMATCHED_PAREN,
+    U_BRK_NEW_LINE_IN_QUOTED_STRING,
+    U_BRK_UNDEFINED_VARIABLE,
+    U_BRK_INIT_ERROR,
+    U_BRK_RULE_EMPTY_SET,
+    U_BRK_UNRECOGNIZED_OPTION,
+    U_BRK_MALFORMED_RULE_TAG,
+    U_BRK_ERROR_LIMIT,
+
+
+
+
+    U_REGEX_INTERNAL_ERROR=0x10300,
+    U_REGEX_ERROR_START=0x10300,
+    U_REGEX_RULE_SYNTAX,
+    U_REGEX_INVALID_STATE,
+    U_REGEX_BAD_ESCAPE_SEQUENCE,
+    U_REGEX_PROPERTY_SYNTAX,
+    U_REGEX_UNIMPLEMENTED,
+    U_REGEX_MISMATCHED_PAREN,
+    U_REGEX_NUMBER_TOO_BIG,
+    U_REGEX_BAD_INTERVAL,
+    U_REGEX_MAX_LT_MIN,
+    U_REGEX_INVALID_BACK_REF,
+    U_REGEX_INVALID_FLAG,
+    U_REGEX_LOOK_BEHIND_LIMIT,
+    U_REGEX_SET_CONTAINS_STRING,
+    U_REGEX_OCTAL_TOO_BIG,
+    U_REGEX_MISSING_CLOSE_BRACKET,
+    U_REGEX_INVALID_RANGE,
+    U_REGEX_STACK_OVERFLOW,
+    U_REGEX_TIME_OUT,
+    U_REGEX_STOPPED_BY_CALLER,
+    U_REGEX_ERROR_LIMIT,
+
+
+
+
+    U_IDNA_PROHIBITED_ERROR=0x10400,
+    U_IDNA_ERROR_START=0x10400,
+    U_IDNA_UNASSIGNED_ERROR,
+    U_IDNA_CHECK_BIDI_ERROR,
+    U_IDNA_STD3_ASCII_RULES_ERROR,
+    U_IDNA_ACE_PREFIX_ERROR,
+    U_IDNA_VERIFICATION_ERROR,
+    U_IDNA_LABEL_TOO_LONG_ERROR,
+    U_IDNA_ZERO_LENGTH_LABEL_ERROR,
+    U_IDNA_DOMAIN_NAME_TOO_LONG_ERROR,
+    U_IDNA_ERROR_LIMIT,
+
+
+
+    U_STRINGPREP_PROHIBITED_ERROR = U_IDNA_PROHIBITED_ERROR,
+    U_STRINGPREP_UNASSIGNED_ERROR = U_IDNA_UNASSIGNED_ERROR,
+    U_STRINGPREP_CHECK_BIDI_ERROR = U_IDNA_CHECK_BIDI_ERROR,
+
+
+
+
+    U_PLUGIN_ERROR_START=0x10500,
+    U_PLUGIN_TOO_HIGH=0x10500,
+    U_PLUGIN_DIDNT_SET_LEVEL,
+    U_PLUGIN_ERROR_LIMIT,
+
+    U_ERROR_LIMIT=U_PLUGIN_ERROR_LIMIT
+} UErrorCode;
+# 855 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+    static
+    inline UBool U_SUCCESS(UErrorCode code) { return (UBool)(code<=U_ZERO_ERROR); }
+
+
+
+
+    static
+    inline UBool U_FAILURE(UErrorCode code) { return (UBool)(code>U_ZERO_ERROR); }
+# 882 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/utypes.h"
+extern "C" const char *
+u_errorName_48(UErrorCode code);
+# 18 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h" 1
+# 22 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+extern "C++" { namespace icu_48 {
+# 101 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+class UMemory {
+public:
+# 120 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+    static void * operator new(size_t size) throw();
+
+
+
+
+
+
+    static void * operator new[](size_t size) throw();
+# 137 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+    static void operator delete(void *p) throw();
+
+
+
+
+
+
+    static void operator delete[](void *p) throw();
+
+
+
+
+
+
+
+    static inline void * operator new(size_t, void *ptr) throw() { return ptr; }
+
+
+
+
+
+
+    static inline void operator delete(void *, void *) throw() {}
+# 191 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+};
+# 215 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+class UObject : public UMemory {
+public:
+
+
+
+
+
+    virtual ~UObject();
+
+
+
+
+
+
+    virtual UClassID getDynamicClassID() const = 0;
+
+protected:
+# 288 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+};
+# 350 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/uobject.h"
+} }
+# 19 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h" 1
+# 76 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" {
+# 88 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+union UHashTok {
+    void* pointer;
+    int32_t integer;
+};
+typedef union UHashTok UHashTok;
+
+
+
+
+struct UHashElement {
+
+    int32_t hashcode;
+    UHashTok value;
+    UHashTok key;
+};
+typedef struct UHashElement UHashElement;
+
+
+
+
+
+
+typedef int32_t UHashFunction(const UHashTok key);
+
+
+
+
+
+
+
+typedef UBool UKeyComparator(const UHashTok key1,
+                                        const UHashTok key2);
+
+
+
+
+
+
+typedef UBool UValueComparator(const UHashTok val1,
+                                          const UHashTok val2);
+
+
+
+
+
+
+
+typedef void UObjectDeleter(void* obj);
+
+
+
+
+
+enum UHashResizePolicy {
+    U_GROW,
+    U_GROW_AND_SHRINK,
+    U_FIXED
+};
+
+
+
+
+
+struct UHashtable {
+
+
+
+    UHashElement *elements;
+
+
+
+    UHashFunction *keyHasher;
+
+    UKeyComparator *keyComparator;
+
+    UValueComparator *valueComparator;
+
+    UObjectDeleter *keyDeleter;
+
+    UObjectDeleter *valueDeleter;
+
+
+
+
+    int32_t count;
+
+
+    int32_t length;
+
+
+
+
+    int32_t highWaterMark;
+    int32_t lowWaterMark;
+    float highWaterRatio;
+    float lowWaterRatio;
+
+    int8_t primeIndex;
+
+    UBool allocated;
+};
+typedef struct UHashtable UHashtable;
+
+}
+# 207 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UHashtable*
+uhash_open_48(UHashFunction *keyHash,
+           UKeyComparator *keyComp,
+           UValueComparator *valueComp,
+           UErrorCode *status);
+# 224 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UHashtable*
+uhash_openSize_48(UHashFunction *keyHash,
+               UKeyComparator *keyComp,
+               UValueComparator *valueComp,
+               int32_t size,
+               UErrorCode *status);
+# 241 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UHashtable*
+uhash_init_48(UHashtable *hash,
+           UHashFunction *keyHash,
+           UKeyComparator *keyComp,
+           UValueComparator *valueComp,
+           UErrorCode *status);
+
+
+
+
+
+extern "C" void
+uhash_close_48(UHashtable *hash);
+# 263 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UHashFunction *
+uhash_setKeyHasher_48(UHashtable *hash, UHashFunction *fn);
+# 273 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UKeyComparator *
+uhash_setKeyComparator_48(UHashtable *hash, UKeyComparator *fn);
+# 283 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UValueComparator *
+uhash_setValueComparator_48(UHashtable *hash, UValueComparator *fn);
+# 296 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UObjectDeleter *
+uhash_setKeyDeleter_48(UHashtable *hash, UObjectDeleter *fn);
+# 309 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UObjectDeleter *
+uhash_setValueDeleter_48(UHashtable *hash, UObjectDeleter *fn);
+# 319 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" void
+uhash_setResizePolicy_48(UHashtable *hash, enum UHashResizePolicy policy);
+
+
+
+
+
+
+extern "C" int32_t
+uhash_count_48(const UHashtable *hash);
+# 343 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" void*
+uhash_put_48(UHashtable *hash,
+          void *key,
+          void *value,
+          UErrorCode *status);
+# 361 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" void*
+uhash_iput_48(UHashtable *hash,
+           int32_t key,
+           void* value,
+           UErrorCode *status);
+# 379 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" int32_t
+uhash_puti_48(UHashtable *hash,
+           void* key,
+           int32_t value,
+           UErrorCode *status);
+# 397 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" int32_t
+uhash_iputi_48(UHashtable *hash,
+           int32_t key,
+           int32_t value,
+           UErrorCode *status);
+# 410 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" void*
+uhash_get_48(const UHashtable *hash,
+          const void *key);
+# 421 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" void*
+uhash_iget_48(const UHashtable *hash,
+           int32_t key);
+# 432 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" int32_t
+uhash_geti_48(const UHashtable *hash,
+           const void* key);
+
+
+
+
+
+
+
+extern "C" int32_t
+uhash_igeti_48(const UHashtable *hash,
+           int32_t key);
+
+
+
+
+
+
+
+extern "C" void*
+uhash_remove_48(UHashtable *hash,
+             const void *key);
+
+
+
+
+
+
+
+extern "C" void*
+uhash_iremove_48(UHashtable *hash,
+              int32_t key);
+
+
+
+
+
+
+
+extern "C" int32_t
+uhash_removei_48(UHashtable *hash,
+              const void* key);
+
+
+
+
+
+
+
+extern "C" int32_t
+uhash_iremovei_48(UHashtable *hash,
+               int32_t key);
+
+
+
+
+
+extern "C" void
+uhash_removeAll_48(UHashtable *hash);
+# 504 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" const UHashElement*
+uhash_find_48(const UHashtable *hash, const void* key);
+# 520 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" const UHashElement*
+uhash_nextElement_48(const UHashtable *hash,
+                  int32_t *pos);
+# 535 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" void*
+uhash_removeElement_48(UHashtable *hash, const UHashElement* e);
+# 569 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" int32_t
+uhash_hashUChars_48(const UHashTok key);
+# 579 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" int32_t
+uhash_hashChars_48(const UHashTok key);
+
+
+extern "C" int32_t
+uhash_hashUCharsN_48(const UChar *key, int32_t length);
+
+extern "C" int32_t
+uhash_hashCharsN_48(const char *key, int32_t length);
+# 596 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" int32_t
+uhash_hashIChars_48(const UHashTok key);
+# 606 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UBool
+uhash_compareUChars_48(const UHashTok key1, const UHashTok key2);
+# 616 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UBool
+uhash_compareChars_48(const UHashTok key1, const UHashTok key2);
+# 626 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UBool
+uhash_compareIChars_48(const UHashTok key1, const UHashTok key2);
+# 638 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" int32_t
+uhash_hashUnicodeString_48(const UHashTok key);
+
+
+
+
+
+
+
+extern "C" int32_t
+uhash_hashCaselessUnicodeString_48(const UHashTok key);
+
+
+
+
+
+
+
+extern "C" UBool
+uhash_compareUnicodeString_48(const UHashTok key1, const UHashTok key2);
+# 666 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" UBool
+uhash_compareCaselessUnicodeString_48(const UHashTok key1, const UHashTok key2);
+
+
+
+
+
+extern "C" void
+uhash_deleteUnicodeString_48(void *obj);
+# 685 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" int32_t
+uhash_hashLong_48(const UHashTok key);
+
+
+
+
+
+
+
+extern "C" UBool
+uhash_compareLong_48(const UHashTok key1, const UHashTok key2);
+# 705 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uhash.h"
+extern "C" void
+uhash_deleteHashtable_48(void *obj);
+
+
+
+
+
+extern "C" void
+uhash_deleteUObject_48(void *obj);
+
+
+
+
+
+
+extern "C" void
+uhash_freeBlock_48(void *obj);
+
+
+
+
+
+
+
+extern "C" UBool
+uhash_equals_48(const UHashtable* hash1, const UHashtable* hash2);
+# 20 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uassert.h" 1
+# 21 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h" 2
+
+extern "C++" { namespace icu_48 {
+# 58 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h"
+class UVector64 : public UObject {
+private:
+    int32_t count;
+
+    int32_t capacity;
+
+    int32_t maxCapacity;
+
+    int64_t* elements;
+
+public:
+    UVector64(UErrorCode &status);
+
+    UVector64(int32_t initialCapacity, UErrorCode &status);
+
+    virtual ~UVector64();
+
+
+
+
+
+    void assign(const UVector64& other, UErrorCode &ec);
+
+
+
+
+
+
+    UBool operator==(const UVector64& other);
+
+
+
+
+    inline UBool operator!=(const UVector64& other);
+
+
+
+
+
+    void addElement(int64_t elem, UErrorCode &status);
+
+    void setElementAt(int64_t elem, int32_t index);
+
+    void insertElementAt(int64_t elem, int32_t index, UErrorCode &status);
+
+    int64_t elementAti(int32_t index) const;
+
+
+
+    int64_t lastElementi(void) const;
+# 121 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h"
+    void removeAllElements();
+
+    int32_t size(void) const;
+
+
+
+
+    inline UBool ensureCapacity(int32_t minimumCapacity, UErrorCode &status);
+
+
+    UBool expandCapacity(int32_t minimumCapacity, UErrorCode &status);
+
+
+
+
+
+
+
+    void setSize(int32_t newSize);
+# 153 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.h"
+    int64_t *getBuffer() const;
+
+
+
+
+
+
+
+    void setMaxCapacity(int32_t limit);
+
+
+
+
+    static UClassID getStaticClassID();
+
+
+
+
+    virtual UClassID getDynamicClassID() const;
+
+private:
+    void _init(int32_t initialCapacity, UErrorCode &status);
+
+
+    UVector64(const UVector64&);
+
+
+    UVector64& operator=(const UVector64&);
+
+
+
+
+
+public:
+
+
+
+
+    int64_t popi(void);
+
+    int64_t push(int64_t i, UErrorCode &status);
+
+    int64_t *reserveBlock(int32_t size, UErrorCode &status);
+    int64_t *popFrame(int32_t size);
+};
+
+
+
+
+inline UBool UVector64::ensureCapacity(int32_t minimumCapacity, UErrorCode &status) {
+    if ((minimumCapacity >= 0) && (capacity >= minimumCapacity)) {
+        return 1;
+    } else {
+        return expandCapacity(minimumCapacity, status);
+    }
+}
+
+inline int64_t UVector64::elementAti(int32_t index) const {
+    return (0 <= index && index < count) ? elements[index] : 0;
+}
+
+
+inline void UVector64::addElement(int64_t elem, UErrorCode &status) {
+    if (ensureCapacity(count + 1, status)) {
+        elements[count] = elem;
+        count++;
+    }
+}
+
+inline int64_t *UVector64::reserveBlock(int32_t size, UErrorCode &status) {
+    if (ensureCapacity(count+size, status) == 0) {
+        return __null;
+    }
+    int64_t *rp = elements+count;
+    count += size;
+    return rp;
+}
+
+inline int64_t *UVector64::popFrame(int32_t size) {
+    ;
+    count -= size;
+    if (count < 0) {
+        count = 0;
+    }
+    return elements+count-size;
+}
+
+
+
+inline int32_t UVector64::size(void) const {
+    return count;
+}
+
+inline int64_t UVector64::lastElementi(void) const {
+    return elementAti(count-1);
+}
+
+inline UBool UVector64::operator!=(const UVector64& other) {
+    return !operator==(other);
+}
+
+inline int64_t *UVector64::getBuffer() const {
+    return elements;
+}
+
+
+
+
+inline int64_t UVector64::push(int64_t i, UErrorCode &status) {
+    addElement(i, status);
+    return i;
+}
+
+inline int64_t UVector64::popi(void) {
+    int64_t result = 0;
+    if (count > 0) {
+        count--;
+        result = elements[count];
+    }
+    return result;
+}
+
+} }
+# 9 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.cpp" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h" 1
+# 28 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+# 1 "c:/marmalade/5.2/s3e/h/std/string.h" 1
+# 17 "c:/marmalade/5.2/s3e/h/std/string.h"
+extern "C" {
+
+void *memcpy(void *dest, const void *src, size_t n);
+void *memset(void *s, int c, size_t n);
+int memcmp(const void *s1, const void *s2, size_t n);
+void *memmove(void *dest, const void *src, size_t n);
+void *memchr(const void *s, int c, size_t n);
+void *memrchr(const void *s, int c, size_t n);
+
+
+
+
+
+
+
+int strcmp(const char *s1, const char *s2);
+int strncmp(const char *s1, const char *s2, size_t n);
+char *strsep(char **stringp, const char *delim);
+char *strcpy(char *dest, const char *src);
+char *strncpy(char *dest, const char *src, size_t n);
+char *strchr(const char *s, int c);
+char *strstr(const char *haystack, const char *needle);
+char *strrchr(const char *s, int c);
+char *strdup(const char *s);
+char *strtok(char *str, const char *delim);
+char *strtok_r(char *str, const char *delim, char **saveptr);
+char *strcat(char *dest, const char *src);
+char *strncat(char *dest, const char *src, size_t n);
+size_t strlen(const char *s);
+size_t strnlen(const char *s, size_t n);
+int strcasecmp(const char *s1, const char *s2);
+int strncasecmp(const char *s1, const char *s2, size_t n);
+size_t strspn(const char *s, const char *accept);
+size_t strcspn(const char *s, const char *reject);
+char *strpbrk(const char *s, const char *accept);
+int strcoll(const char *s1, const char *s2);
+char *strerror(int errnum);
+size_t strxfrm(char *dest, const char *src, size_t n);
+
+int strerror_r(int errnum, char *buf, size_t buflen);
+
+
+
+
+
+size_t strlcpy(char* dest, const char* src, size_t len);
+size_t strlcat(char* dest, const char* src, size_t len);
+
+}
+# 29 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h" 2
+
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h" 1
+# 43 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+extern "C++" { namespace icu_48 {
+# 63 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+template<typename T>
+class LocalPointerBase {
+public:
+
+
+
+
+
+    explicit LocalPointerBase(T *p=__null) : ptr(p) {}
+
+
+
+
+
+    ~LocalPointerBase() { }
+
+
+
+
+
+    UBool isNull() const { return ptr==__null; }
+
+
+
+
+
+    UBool isValid() const { return ptr!=__null; }
+
+
+
+
+
+
+
+    bool operator==(const T *other) const { return ptr==other; }
+
+
+
+
+
+
+
+    bool operator!=(const T *other) const { return ptr!=other; }
+
+
+
+
+
+    T *getAlias() const { return ptr; }
+
+
+
+
+
+    T &operator*() const { return *ptr; }
+
+
+
+
+
+    T *operator->() const { return ptr; }
+
+
+
+
+
+
+    T *orphan() {
+        T *p=ptr;
+        ptr=__null;
+        return p;
+    }
+
+
+
+
+
+
+
+    void adoptInstead(T *p) {
+
+        ptr=p;
+    }
+protected:
+    T *ptr;
+private:
+
+    bool operator==(const LocalPointerBase &other);
+    bool operator!=(const LocalPointerBase &other);
+
+    LocalPointerBase(const LocalPointerBase &other);
+    void operator=(const LocalPointerBase &other);
+
+    static void * operator new(size_t size);
+    static void * operator new[](size_t size);
+
+    static void * operator new(size_t, void *ptr);
+
+};
+# 181 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+template<typename T>
+class LocalPointer : public LocalPointerBase<T> {
+public:
+
+
+
+
+
+    explicit LocalPointer(T *p=__null) : LocalPointerBase<T>(p) {}
+
+
+
+
+    ~LocalPointer() {
+        delete LocalPointerBase<T>::ptr;
+    }
+
+
+
+
+
+
+    void adoptInstead(T *p) {
+        delete LocalPointerBase<T>::ptr;
+        LocalPointerBase<T>::ptr=p;
+    }
+};
+# 227 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+template<typename T>
+class LocalArray : public LocalPointerBase<T> {
+public:
+
+
+
+
+
+    explicit LocalArray(T *p=__null) : LocalPointerBase<T>(p) {}
+
+
+
+
+    ~LocalArray() {
+        delete[] LocalPointerBase<T>::ptr;
+    }
+
+
+
+
+
+
+    void adoptInstead(T *p) {
+        delete[] LocalPointerBase<T>::ptr;
+        LocalPointerBase<T>::ptr=p;
+    }
+
+
+
+
+
+
+
+    T &operator[](ptrdiff_t i) const { return LocalPointerBase<T>::ptr[i]; }
+};
+# 297 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/localpointer.h"
+} }
+# 31 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h" 2
+
+
+
+
+
+
+extern "C" void *
+uprv_malloc_48(size_t s);
+
+extern "C" void *
+uprv_realloc_48(void *mem, size_t size);
+
+extern "C" void
+uprv_free_48(void *mem);
+
+
+
+
+
+typedef union {
+    long t1;
+    double t2;
+    void *t3;
+} UAlignedMemory;
+# 83 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+extern "C" UBool
+cmemory_inUse_48(void);
+
+
+
+
+
+
+extern "C" UBool
+cmemory_cleanup_48(void);
+
+
+
+extern "C++" { namespace icu_48 {
+# 105 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+template<typename T>
+class LocalMemory : public LocalPointerBase<T> {
+public:
+
+
+
+
+    explicit LocalMemory(T *p=__null) : LocalPointerBase<T>(p) {}
+
+
+
+    ~LocalMemory() {
+        uprv_free_48(LocalPointerBase<T>::ptr);
+    }
+
+
+
+
+
+    void adoptInstead(T *p) {
+        uprv_free_48(LocalPointerBase<T>::ptr);
+        LocalPointerBase<T>::ptr=p;
+    }
+# 136 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline T *allocateInsteadAndReset(int32_t newCapacity=1);
+# 148 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline T *allocateInsteadAndCopy(int32_t newCapacity=1, int32_t length=0);
+
+
+
+
+
+
+    T &operator[](ptrdiff_t i) const { return LocalPointerBase<T>::ptr[i]; }
+};
+
+template<typename T>
+inline T *LocalMemory<T>::allocateInsteadAndReset(int32_t newCapacity) {
+    if(newCapacity>0) {
+        T *p=(T *)uprv_malloc_48(newCapacity*sizeof(T));
+        if(p!=__null) {
+            :: memset(p, 0, newCapacity*sizeof(T));
+            uprv_free_48(LocalPointerBase<T>::ptr);
+            LocalPointerBase<T>::ptr=p;
+        }
+        return p;
+    } else {
+        return __null;
+    }
+}
+
+
+template<typename T>
+inline T *LocalMemory<T>::allocateInsteadAndCopy(int32_t newCapacity, int32_t length) {
+    if(newCapacity>0) {
+        T *p=(T *)uprv_malloc_48(newCapacity*sizeof(T));
+        if(p!=__null) {
+            if(length>0) {
+                if(length>newCapacity) {
+                    length=newCapacity;
+                }
+                :: memcpy(p, LocalPointerBase<T>::ptr, length*sizeof(T));
+            }
+            uprv_free_48(LocalPointerBase<T>::ptr);
+            LocalPointerBase<T>::ptr=p;
+        }
+        return p;
+    } else {
+        return __null;
+    }
+}
+# 205 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+template<typename T, int32_t stackCapacity>
+class MaybeStackArray {
+public:
+
+
+
+    MaybeStackArray() : ptr(stackArray), capacity(stackCapacity), needToRelease(0) {}
+
+
+
+    ~MaybeStackArray() { releaseArray(); }
+
+
+
+
+    int32_t getCapacity() const { return capacity; }
+
+
+
+
+    T *getAlias() const { return ptr; }
+
+
+
+
+    T *getArrayLimit() const { return getAlias()+capacity; }
+
+
+
+
+
+    operator T *() const { return ptr; }
+
+
+
+
+
+
+    T &operator[](ptrdiff_t i) { return ptr[i]; }
+
+
+
+
+
+
+    void aliasInstead(T *otherArray, int32_t otherCapacity) {
+        if(otherArray!=__null && otherCapacity>0) {
+            releaseArray();
+            ptr=otherArray;
+            capacity=otherCapacity;
+            needToRelease=0;
+        }
+    }
+# 268 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline T *resize(int32_t newCapacity, int32_t length=0);
+# 279 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline T *orphanOrClone(int32_t length, int32_t &resultCapacity);
+private:
+    T *ptr;
+    int32_t capacity;
+    UBool needToRelease;
+    T stackArray[stackCapacity];
+    void releaseArray() {
+        if(needToRelease) {
+            uprv_free_48(ptr);
+        }
+    }
+
+    bool operator==(const MaybeStackArray & ) {return 0;}
+    bool operator!=(const MaybeStackArray & ) {return 1;}
+
+    MaybeStackArray(const MaybeStackArray & ) {}
+    void operator=(const MaybeStackArray & ) {}
+# 310 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+};
+
+template<typename T, int32_t stackCapacity>
+inline T *MaybeStackArray<T, stackCapacity>::resize(int32_t newCapacity, int32_t length) {
+    if(newCapacity>0) {
+        T *p=(T *)uprv_malloc_48(newCapacity*sizeof(T));
+        if(p!=__null) {
+            if(length>0) {
+                if(length>capacity) {
+                    length=capacity;
+                }
+                if(length>newCapacity) {
+                    length=newCapacity;
+                }
+                :: memcpy(p, ptr, length*sizeof(T));
+            }
+            releaseArray();
+            ptr=p;
+            capacity=newCapacity;
+            needToRelease=1;
+        }
+        return p;
+    } else {
+        return __null;
+    }
+}
+
+template<typename T, int32_t stackCapacity>
+inline T *MaybeStackArray<T, stackCapacity>::orphanOrClone(int32_t length, int32_t &resultCapacity) {
+    T *p;
+    if(needToRelease) {
+        p=ptr;
+    } else if(length<=0) {
+        return __null;
+    } else {
+        if(length>capacity) {
+            length=capacity;
+        }
+        p=(T *)uprv_malloc_48(length*sizeof(T));
+        if(p==__null) {
+            return __null;
+        }
+        :: memcpy(p, ptr, length*sizeof(T));
+    }
+    resultCapacity=length;
+    ptr=stackArray;
+    capacity=stackCapacity;
+    needToRelease=0;
+    return p;
+}
+# 371 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+template<typename H, typename T, int32_t stackCapacity>
+class MaybeStackHeaderAndArray {
+public:
+
+
+
+    MaybeStackHeaderAndArray() : ptr(&stackHeader), capacity(stackCapacity), needToRelease(0) {}
+
+
+
+    ~MaybeStackHeaderAndArray() { releaseMemory(); }
+
+
+
+
+    int32_t getCapacity() const { return capacity; }
+
+
+
+
+    H *getAlias() const { return ptr; }
+
+
+
+
+    T *getArrayStart() const { return reinterpret_cast<T *>(getAlias()+1); }
+
+
+
+
+    T *getArrayLimit() const { return getArrayStart()+capacity; }
+
+
+
+
+
+    operator H *() const { return ptr; }
+
+
+
+
+
+
+    T &operator[](ptrdiff_t i) { return getArrayStart()[i]; }
+
+
+
+
+
+
+    void aliasInstead(H *otherMemory, int32_t otherCapacity) {
+        if(otherMemory!=__null && otherCapacity>0) {
+            releaseMemory();
+            ptr=otherMemory;
+            capacity=otherCapacity;
+            needToRelease=0;
+        }
+    }
+# 440 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline H *resize(int32_t newCapacity, int32_t length=0);
+# 451 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+    inline H *orphanOrClone(int32_t length, int32_t &resultCapacity);
+private:
+    H *ptr;
+    int32_t capacity;
+    UBool needToRelease;
+
+    H stackHeader;
+    T stackArray[stackCapacity];
+    void releaseMemory() {
+        if(needToRelease) {
+            uprv_free_48(ptr);
+        }
+    }
+
+    bool operator==(const MaybeStackHeaderAndArray & ) {return 0;}
+    bool operator!=(const MaybeStackHeaderAndArray & ) {return 1;}
+
+    MaybeStackHeaderAndArray(const MaybeStackHeaderAndArray & ) {}
+    void operator=(const MaybeStackHeaderAndArray & ) {}
+# 479 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/cmemory.h"
+};
+
+template<typename H, typename T, int32_t stackCapacity>
+inline H *MaybeStackHeaderAndArray<H, T, stackCapacity>::resize(int32_t newCapacity,
+                                                                int32_t length) {
+    if(newCapacity>=0) {
+        H *p=(H *)uprv_malloc_48(sizeof(H)+newCapacity*sizeof(T));
+        if(p!=__null) {
+            if(length<0) {
+                length=0;
+            } else if(length>0) {
+                if(length>capacity) {
+                    length=capacity;
+                }
+                if(length>newCapacity) {
+                    length=newCapacity;
+                }
+            }
+            :: memcpy(p, ptr, sizeof(H)+length*sizeof(T));
+            releaseMemory();
+            ptr=p;
+            capacity=newCapacity;
+            needToRelease=1;
+        }
+        return p;
+    } else {
+        return __null;
+    }
+}
+
+template<typename H, typename T, int32_t stackCapacity>
+inline H *MaybeStackHeaderAndArray<H, T, stackCapacity>::orphanOrClone(int32_t length,
+                                                                       int32_t &resultCapacity) {
+    H *p;
+    if(needToRelease) {
+        p=ptr;
+    } else {
+        if(length<0) {
+            length=0;
+        } else if(length>capacity) {
+            length=capacity;
+        }
+        p=(H *)uprv_malloc_48(sizeof(H)+length*sizeof(T));
+        if(p==__null) {
+            return __null;
+        }
+        :: memcpy(p, ptr, sizeof(H)+length*sizeof(T));
+    }
+    resultCapacity=length;
+    ptr=&stackHeader;
+    capacity=stackCapacity;
+    needToRelease=0;
+    return p;
+}
+
+} }
+# 10 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.cpp" 2
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h" 1
+# 20 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h"
+# 1 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/putil.h" 1
+# 73 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/putil.h"
+extern "C" const char* u_getDataDirectory_48(void);
+# 94 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/putil.h"
+extern "C" void u_setDataDirectory_48(const char *directory);
+# 105 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/putil.h"
+extern "C" const char* uprv_getDefaultCodepage_48(void);
+# 117 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/putil.h"
+extern "C" const char* uprv_getDefaultLocaleID_48(void);
+# 168 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/putil.h"
+extern "C" void
+u_charsToUChars_48(const char *cs, UChar *us, int32_t length);
+# 190 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/unicode/putil.h"
+extern "C" void
+u_UCharsToChars_48(const UChar *us, char *cs, int32_t length);
+# 21 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h" 2
+# 36 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h"
+extern "C" UBool uprv_isNaN_48(double d);
+
+
+
+
+extern "C" UBool uprv_isInfinite_48(double d);
+
+
+
+
+extern "C" UBool uprv_isPositiveInfinity_48(double d);
+
+
+
+
+extern "C" UBool uprv_isNegativeInfinity_48(double d);
+
+
+
+
+extern "C" double uprv_getNaN_48(void);
+
+
+
+
+extern "C" double uprv_getInfinity_48(void);
+
+
+
+
+
+extern "C" double uprv_trunc_48(double d);
+
+
+
+
+extern "C" double uprv_floor_48(double d);
+
+
+
+
+extern "C" double uprv_ceil_48(double d);
+
+
+
+
+extern "C" double uprv_fabs_48(double d);
+
+
+
+
+extern "C" double uprv_modf_48(double d, double* pinteger);
+
+
+
+
+extern "C" double uprv_fmod_48(double d, double y);
+
+
+
+
+extern "C" double uprv_pow_48(double d, double exponent);
+
+
+
+
+extern "C" double uprv_pow10_48(int32_t exponent);
+
+
+
+
+extern "C" double uprv_fmax_48(double d, double y);
+
+
+
+
+extern "C" double uprv_fmin_48(double d, double y);
+
+
+
+
+extern "C" int32_t uprv_max_48(int32_t d, int32_t y);
+
+
+
+
+extern "C" int32_t uprv_min_48(int32_t d, int32_t y);
+# 135 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h"
+extern "C" double uprv_maxMantissa_48(void);
+
+
+
+
+
+extern "C" double uprv_log_48(double d);
+
+
+
+
+
+
+
+extern "C" double uprv_round_48(double x);
+# 194 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h"
+extern "C" void uprv_tzset_48(void);
+
+
+
+
+
+
+
+extern "C" int32_t uprv_timezone_48(void);
+# 212 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h"
+extern "C" const char* uprv_tzname_48(int n);
+
+
+
+
+
+
+
+extern "C" UDate uprv_getUTCtime_48(void);
+# 229 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h"
+extern "C" UDate uprv_getRawUTCtime_48(void);
+
+
+
+
+
+
+
+extern "C" UBool uprv_pathIsAbsolute_48(const char *path);
+
+
+
+
+
+
+
+extern "C" void * uprv_maximumPtr_48(void *base);
+# 294 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/putilimp.h"
+typedef void (UVoidFunction)(void);
+
+
+
+
+
+extern "C" void * uprv_dl_open_48(const char *libName, UErrorCode *status);
+
+
+
+
+
+extern "C" void uprv_dl_close_48( void *lib, UErrorCode *status);
+
+
+
+
+
+extern "C" UVoidFunction* uprv_dlsym_func_48( void *lib, const char *symbolName, UErrorCode *status);
+# 11 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.cpp" 2
+
+extern "C++" { namespace icu_48 {
+# 22 "c:/users/will/documents/utterspeech/marmalade/icu/common/source/uvectr64.cpp"
+UClassID UVector64::getStaticClassID() { static char classID = 0; return (UClassID)&classID; } UClassID UVector64::getDynamicClassID() const { return UVector64::getStaticClassID(); }
+
+UVector64::UVector64(UErrorCode &status) :
+    count(0),
+    capacity(0),
+    maxCapacity(0),
+    elements(__null)
+{
+    _init(8, status);
+}
+
+UVector64::UVector64(int32_t initialCapacity, UErrorCode &status) :
+    count(0),
+    capacity(0),
+    maxCapacity(0),
+    elements(0)
+{
+    _init(initialCapacity, status);
+}
+
+
+
+void UVector64::_init(int32_t initialCapacity, UErrorCode &status) {
+
+    if (initialCapacity < 1) {
+        initialCapacity = 8;
+    }
+    if (maxCapacity>0 && maxCapacity<initialCapacity) {
+        initialCapacity = maxCapacity;
+    }
+    if (initialCapacity > (int32_t)(0x7fffffffL / sizeof(int64_t))) {
+        initialCapacity = uprv_min_48(8, maxCapacity);
+    }
+    elements = (int64_t *)uprv_malloc_48(sizeof(int64_t)*initialCapacity);
+    if (elements == 0) {
+        status = U_MEMORY_ALLOCATION_ERROR;
+    } else {
+        capacity = initialCapacity;
+    }
+}
+
+UVector64::~UVector64() {
+    uprv_free_48(elements);
+    elements = 0;
+}
+
+
+
+
+void UVector64::assign(const UVector64& other, UErrorCode &ec) {
+    if (ensureCapacity(other.count, ec)) {
+        setSize(other.count);
+        for (int32_t i=0; i<other.count; ++i) {
+            elements[i] = other.elements[i];
+        }
+    }
+}
+
+
+UBool UVector64::operator==(const UVector64& other) {
+    int32_t i;
+    if (count != other.count) return 0;
+    for (i=0; i<count; ++i) {
+        if (elements[i] != other.elements[i]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+
+void UVector64::setElementAt(int64_t elem, int32_t index) {
+    if (0 <= index && index < count) {
+        elements[index] = elem;
+    }
+
+}
+
+void UVector64::insertElementAt(int64_t elem, int32_t index, UErrorCode &status) {
+
+    if (0 <= index && index <= count && ensureCapacity(count + 1, status)) {
+        for (int32_t i=count; i>index; --i) {
+            elements[i] = elements[i-1];
+        }
+        elements[index] = elem;
+        ++count;
+    }
+
+}
+
+void UVector64::removeAllElements(void) {
+    count = 0;
+}
+
+UBool UVector64::expandCapacity(int32_t minimumCapacity, UErrorCode &status) {
+    if (minimumCapacity < 0) {
+        status = U_ILLEGAL_ARGUMENT_ERROR;
+        return 0;
+    }
+    if (capacity >= minimumCapacity) {
+        return 1;
+    }
+    if (maxCapacity>0 && minimumCapacity>maxCapacity) {
+        status = U_BUFFER_OVERFLOW_ERROR;
+        return 0;
+    }
+    if (capacity > (0x7fffffffL - 1) / 2) {
+        status = U_ILLEGAL_ARGUMENT_ERROR;
+        return 0;
+    }
+    int32_t newCap = capacity * 2;
+    if (newCap < minimumCapacity) {
+        newCap = minimumCapacity;
+    }
+    if (maxCapacity > 0 && newCap > maxCapacity) {
+        newCap = maxCapacity;
+    }
+    if (newCap > (int32_t)(0x7fffffffL / sizeof(int64_t))) {
+
+        status = U_ILLEGAL_ARGUMENT_ERROR;
+        return 0;
+    }
+    int64_t* newElems = (int64_t *)uprv_realloc_48(elements, sizeof(int64_t)*newCap);
+    if (newElems == __null) {
+
+        status = U_MEMORY_ALLOCATION_ERROR;
+        return 0;
+    }
+    elements = newElems;
+    capacity = newCap;
+    return 1;
+}
+
+void UVector64::setMaxCapacity(int32_t limit) {
+    ;
+    if (limit < 0) {
+        limit = 0;
+    }
+    if (limit > (int32_t)(0x7fffffffL / sizeof(int64_t))) {
+
+        return;
+    }
+    maxCapacity = limit;
+    if (capacity <= maxCapacity || maxCapacity == 0) {
+
+        return;
+    }
+
+
+
+    int64_t* newElems = (int64_t *)uprv_realloc_48(elements, sizeof(int64_t)*maxCapacity);
+    if (newElems == __null) {
+
+
+        return;
+    }
+    elements = newElems;
+    capacity = maxCapacity;
+    if (count > capacity) {
+        count = capacity;
+    }
+}
+
+
+
+
+
+
+
+void UVector64::setSize(int32_t newSize) {
+    int32_t i;
+    if (newSize < 0) {
+        return;
+    }
+    if (newSize > count) {
+        UErrorCode ec = U_ZERO_ERROR;
+        if (!ensureCapacity(newSize, ec)) {
+            return;
+        }
+        for (i=count; i<newSize; ++i) {
+            elements[i] = 0;
+        }
+    }
+    count = newSize;
+}
+
+} }
